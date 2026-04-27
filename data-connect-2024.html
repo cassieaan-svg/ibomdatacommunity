@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Connect Uyo 2024 — Ibom Data Community</title>
+  <meta name="description" content="Ibom Data Connect 2024: Driving Innovation Through Data. A landmark event in Uyo, Akwa Ibom — learning, networking, and innovation." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .dc-hero { background:linear-gradient(135deg,#0D2137 0%,#1A3A5C 60%,#245080 100%); color:white; padding:90px 0; position:relative; overflow:hidden; }
+    .dc-hero::before { content:''; position:absolute; top:-100px; right:-80px; width:500px; height:500px; border-radius:50%; background:#2c88f7; opacity:.08; }
+    .dc-hero::after { content:''; position:absolute; bottom:-80px; left:5%; width:350px; height:350px; border-radius:50%; background:var(--orange); opacity:.07; }
+    .dc-hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; position:relative; z-index:1; }
+    .dc-hero h1 { font-size:clamp(1.8rem,3.5vw,3rem); margin-bottom:20px; line-height:1.2; color:white; }
+    .dc-hero h1 span { color:#63acf7; }
+    .dc-hero .sub { font-size:1.05rem; color:rgba(255,255,255,.75); margin-bottom:32px; line-height:1.7; }
+    .dc-hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+    .dc-visual { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); padding:36px; }
+    .dc-visual h3 { color:white; margin-bottom:20px; }
+    .dc-stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .dc-stat { background:rgba(255,255,255,.08); border-radius:10px; padding:20px; text-align:center; }
+    .dc-stat .n { font-size:2rem; font-weight:800; color:#63acf7; display:block; }
+    .dc-stat .l { font-size:.78rem; color:rgba(255,255,255,.6); margin-top:4px; }
+    .experience-card { background:var(--white); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); border:1px solid var(--border-light); text-align:center; }
+    .experience-icon { font-size:2.5rem; margin-bottom:16px; }
+    .why-card { background:var(--cream); border-radius:var(--radius); padding:28px; border-top:3px solid var(--orange); }
+    .why-card h4 { margin-bottom:8px; color:var(--orange); }
+    .speaker-card { background:var(--white); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); border:1px solid var(--border-light); text-align:center; }
+    .speaker-img { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,#1A3A5C,#2c88f7); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 16px; }
+    .stay-connected-list { display:flex; flex-direction:column; gap:20px; }
+    .stay-item { display:flex; gap:20px; align-items:flex-start; background:var(--white); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); border:1px solid var(--border-light); }
+    .stay-num { width:36px; height:36px; border-radius:50%; background:var(--orange); color:white; font-weight:700; font-size:.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .highlight-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px; }
+    .highlight-img { border-radius:10px; aspect-ratio:4/3; background:linear-gradient(135deg,var(--amber),var(--orange)); display:flex; align-items:center; justify-content:center; font-size:2.5rem; overflow:hidden; }
+    @media(max-width:900px){.dc-hero-inner{grid-template-columns:1fr}.dc-visual{display:none}.highlight-gallery{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.highlight-gallery{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">IDC</div>
+      <span>Ibom Data Community</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Events</a>
+        <ul class="dropdown-menu">
+          <li><a href="data-connect-2024.html">Data Connect Uyo 2024</a></li>
+          <li><a href="hackathon-2025.html">Hackathon 2025</a></li>
+        </ul>
+      </li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="btn btn-primary nav-cta">Join Community</a>
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="data-connect-2024.html">Data Connect Uyo 2024</a>
+  <a href="hackathon-2025.html">Hackathon 2025</a>
+  <a href="resources.html">Resources</a>
+  <a href="team.html">Team</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="index.html#contact" class="btn btn-primary" style="text-align:center">Join Community</a>
+</div>
+
+<!-- HERO -->
+<section class="dc-hero">
+  <div class="container dc-hero-inner">
+    <div>
+      <div class="tag" style="background:rgba(99,172,247,.2);color:#63acf7;">📅 Past Event — 2024</div>
+      <h1>Ibom Data Connect 2024:<br/><span>Driving Innovation Through Data</span></h1>
+      <p class="sub">Unlocking the Power of Data in Uyo. An unforgettable day of learning, networking, and innovation that brought together 100+ data enthusiasts from across the region.</p>
+      <div class="dc-hero-actions">
+        <a href="#highlights" class="btn btn-primary">View Highlights</a>
+        <a href="hackathon-2025.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);">See Hackathon 2025 →</a>
+      </div>
+    </div>
+    <div class="dc-visual">
+      <h3>📊 Event in Numbers</h3>
+      <div class="dc-stat-grid">
+        <div class="dc-stat"><span class="n">100+</span><div class="l">Data Enthusiasts</div></div>
+        <div class="dc-stat"><span class="n">5</span><div class="l">Expert Speakers</div></div>
+        <div class="dc-stat"><span class="n">1</span><div class="l">Hands-On Workshop</div></div>
+        <div class="dc-stat"><span class="n">4</span><div class="l">Panel Members</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE THE DATA REVOLUTION -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">What We Delivered</div>
+      <h2>Experience the Data Revolution</h2>
+      <p>Three pillars that made Ibom Data Connect 2024 a day to remember.</p>
+    </div>
+    <div class="card-grid-3">
+      <div class="experience-card">
+        <div class="experience-icon">🎤</div>
+        <h4>Expert Keynote Speakers</h4>
+        <p>Insights from leading data experts sharing their knowledge, vision, and real-world experiences to inspire and educate attendees.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-icon">🛠️</div>
+        <h4>Interactive Sessions &amp; Workshop</h4>
+        <p>Hands-on learning opportunities designed to enhance your data skills through practical exercises and guided workshops.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-icon">🤝</div>
+        <h4>Meaningful Connections</h4>
+        <p>Networking with data professionals and enthusiasts from across Akwa Ibom, creating lasting professional relationships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY UYO -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Why It Mattered</div>
+      <h2>Why Uyo? Why Now?</h2>
+      <p>Uyo is uniquely positioned to become a hub for data innovation in Nigeria.</p>
+    </div>
+    <div class="card-grid-3">
+      <div class="why-card">
+        <div class="card-icon">⚡</div>
+        <h4>Rising Tech Scene</h4>
+        <p>Uyo is quickly becoming a hub for technological innovation in Nigeria, with a growing community of tech-savvy professionals and entrepreneurs.</p>
+      </div>
+      <div class="why-card">
+        <div class="card-icon">📈</div>
+        <h4>Stepping into Data</h4>
+        <p>Motivating beginners to start their data journey with confidence and clarity, providing accessible entry points into the data profession.</p>
+      </div>
+      <div class="why-card">
+        <div class="card-icon">🌱</div>
+        <h4>Nurturing a Vibrant Community</h4>
+        <p>Empowering and strengthening the growing community of data analysts, scientists, and enthusiasts in the region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">The Lineup</div>
+      <h2>Keynote Speakers &amp; Panel Members</h2>
+      <p>Industry leaders who shared invaluable insights, real experiences, and inspiration.</p>
+    </div>
+    <div class="card-grid-2" style="max-width:760px;margin:0 auto;">
+      <div class="speaker-card">
+        <div class="speaker-img">🎤</div>
+        <h4>Meet the Speakers</h4>
+        <p style="font-size:.88rem;color:var(--text-light);">Visionary leaders and experts who shared valuable insights, real-world experiences, and impactful stories. Practical exercises designed to promote team members to acquire skills.</p>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-img">🎙️</div>
+        <h4>Meet the Panelists</h4>
+        <p style="font-size:.88rem;color:var(--text-light);">Diverse voices and industry experts sharing practical insights, experiences, and perspectives to inspire and guide your data journey through candid Q&amp;A sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT HIGHLIGHTS -->
+<section class="section section-amber" id="highlights">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Recap</div>
+      <h2>Event Highlights: A Day of Innovation</h2>
+      <p>Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Data Innovation Uyo 2024.</p>
+    </div>
+    <div class="highlight-gallery">
+      <div class="highlight-img">🎓</div>
+      <div class="highlight-img">🤝</div>
+      <div class="highlight-img">📊</div>
+    </div>
+    <p style="text-align:center;color:var(--text-light);margin-bottom:28px;font-size:.9rem;">Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Data Innovation Uyo 2024.</p>
+    <div style="text-align:center;">
+      <a href="index.html#contact" class="btn btn-primary">Join the Community</a>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Partners</div>
+      <h2>Sponsors &amp; Partners: Powering the Future of Data</h2>
+      <p>We are proudly supported by organizations dedicated to fostering innovation and driving data adoption in Nigeria.</p>
+    </div>
+    <div class="sponsor-grid">
+      <div class="sponsor-card"><div class="sponsor-logo">🌍</div>Ibom Data Community</div>
+      <div class="sponsor-card"><div class="sponsor-logo">🚀</div>Start Innovation Hub</div>
+      <div class="sponsor-card"><div class="sponsor-logo">💎</div>Gem Nexus</div>
+      <div class="sponsor-card"><div class="sponsor-logo">📦</div>TakaShip</div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">By the Numbers</div>
+      <h2>Data Innovation Uyo 2024 in Numbers</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Data Enthusiasts attended to explore the power of data</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Expert Speakers sharing insights and expertise on data innovation</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Hands-On Workshop providing practical skills and knowledge</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Panel Members in a Q&amp;A session to deepen understanding</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAY CONNECTED -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Keep Growing</div>
+      <h2>Stay Connected</h2>
+      <p>The event was just the beginning. Here's how to keep the momentum going.</p>
+    </div>
+    <div class="stay-connected-list" style="max-width:700px;margin:0 auto;">
+      <div class="stay-item">
+        <div class="stay-num">1</div>
+        <div>
+          <h4 style="margin-bottom:4px;">Free Learning Resources</h4>
+          <p style="font-size:.9rem;">Simple tools, free resources, and learning paths for beginners — Excel, SQL, Power BI, Python, etc.</p>
+        </div>
+      </div>
+      <div class="stay-item">
+        <div class="stay-num">2</div>
+        <div>
+          <h4 style="margin-bottom:4px;">Community Support</h4>
+          <p style="font-size:.9rem;">Access to learning support, projects, mentorship, and meetups within the Ibom Data Community network.</p>
+        </div>
+      </div>
+      <div class="stay-item">
+        <div class="stay-num">3</div>
+        <div>
+          <h4 style="margin-bottom:4px;">Grow Through Collaboration</h4>
+          <p style="font-size:.9rem;">Tips for staying consistent, joining a community, and growing through collaboration with like-minded data enthusiasts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="tag" style="background:rgba(255,255,255,.15);color:rgba(255,255,255,.8);">Get In Touch</div>
+        <h2>Follow Us On</h2>
+        <p>Stay updated on all event news, insider tips, and networking opportunities. Follow us on our social channels.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <strong>Contact Us</strong>
+              <a href="mailto:ibomdatacommunity@gmail.com" style="color:var(--orange);">ibomdatacommunity@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social" style="margin-top:28px;">
+          <p>Follow us:</p>
+          <div class="social-row">
+            <a href="#" class="social-pill">📘 Facebook</a>
+            <a href="#" class="social-pill">💼 LinkedIn</a>
+            <a href="#" class="social-pill">🐦 Twitter / X</a>
+          </div>
+          <p style="margin-top:10px;font-size:.82rem;color:rgba(255,255,255,.45);">@ibomndata</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px;">
+          <h3 style="color:white;margin-bottom:16px;">Miss Data Connect 2024?</h3>
+          <p style="margin-bottom:24px;">Don't miss the next one! Join our community to be the first to know about upcoming events, workshops, and hackathons.</p>
+          <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-primary" style="width:100%;text-align:center;display:block;padding:14px;">Join the Community</a>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px;">
+          <h3 style="color:white;margin-bottom:12px;">🏆 Next Up: Hackathon 2025</h3>
+          <p style="margin-bottom:20px;font-size:.9rem;">Register for Ibom Data Connect 2.0 Hackathon and compete for ₦50,000 in prizes.</p>
+          <a href="hackathon-2025.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);width:100%;text-align:center;display:block;padding:12px;">Register Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-mark">IDC</div>
+        <strong style="color:white;font-size:1rem;">Ibom Data Community</strong>
+        <p>A vibrant nonprofit community advancing data education and fostering inclusive innovation in Akwa Ibom and beyond.</p>
+      </div>
+      <div>
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Events</h5>
+        <ul>
+          <li><a href="data-connect-2024.html">Data Connect 2024</a></li>
+          <li><a href="hackathon-2025.html">Hackathon 2025</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ibom Data Community. All rights reserved.</span>
+      <div class="social-links">
+        <a href="#">📘 Facebook</a>
+        <a href="#">💼 LinkedIn</a>
+        <a href="#">🐦 X / Twitter</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+</script>
+</body>
+</html>
