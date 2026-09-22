@@ -1,0 +1,18 @@
+{
+  "spotlights": [
+    {
+      "slug": "your-first-member-of-the-week",
+      "name": "Your first Member of the Week",
+      "role": "Community Member of the Week",
+      "quote": "This is a placeholder. Open /admin → Member Spotlight to feature a real member here — their story, a skill they picked up, or a project they shipped.",
+      "photo": ""
+    },
+    {
+      "slug": "add-a-second-spotlight",
+      "name": "Add a second spotlight",
+      "role": "Community Member of the Week",
+      "quote": "Add two or more entries and this card will automatically rotate between them on the homepage.",
+      "photo": ""
+    }
+  ]
+}

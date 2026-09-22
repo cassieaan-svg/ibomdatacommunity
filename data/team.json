@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "name": "Christy-Annie Bassey",
+      "role": "Founder",
+      "bio": "Visionary leader and founder of Ibom Data Community, passionate about driving data innovation and making data education accessible across Akwa Ibom.",
+      "photo": "",
+      "linkedin": "https://www.linkedin.com/in/misschristy-bassey",
+      "twitter": "https://x.com/cassiebassey"
+    },
+    {
+      "name": "Jane Umoh",
+      "role": "Community Manager",
+      "bio": "Keeps the IDC community vibrant and engaged — managing member interactions, events coordination, and the Community Member of the Week spotlight.",
+      "photo": "",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "name": "Ubon Ibangha",
+      "role": "Community Manager",
+      "bio": "Supports community growth and engagement, helping members connect, collaborate, and get the most out of their IDC experience.",
+      "photo": "",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "name": "Blessing Ekwere",
+      "role": "Member",
+      "bio": "An active and contributing member of Ibom Data Community, passionate about data and driving the community's vision forward.",
+      "photo": "",
+      "linkedin": "",
+      "twitter": ""
+    },
+    {
+      "name": "Israel",
+      "role": "Member",
+      "bio": "A dedicated member of Ibom Data Community, contributing to the growth and energy of the data ecosystem in Akwa Ibom.",
+      "photo": "",
+      "linkedin": "",
+      "twitter": ""
+    }
+  ]
+}

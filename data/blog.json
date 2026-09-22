@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "slug": "welcome-to-the-ibom-data-blog",
+      "title": "Welcome to the Ibom Data Community Blog",
+      "excerpt": "A new space for stories, lessons and ideas from our growing data community in Akwa Ibom.",
+      "date": "2026-09-22",
+      "author": "Ibom Data Community",
+      "coverImage": "images/community/group-photo.jpg",
+      "body": "We're starting this blog to share what's actually happening inside our community — the workshops, the wins, the lessons learned the hard way, and the people behind it all.\n\nExpect recaps from our events, practical data tutorials, member spotlights in long form, and honest reflections on building a data community from the ground up in Akwa Ibom.\n\nGot something you'd like to write about? Reach out — we're always looking for community voices to feature here."
+    },
+    {
+      "slug": "5-lessons-from-our-first-hackathon",
+      "title": "5 Lessons From Our First Hackathon",
+      "excerpt": "What we learned putting together IDC's first hackathon — from team formation to the final presentations.",
+      "date": "2026-06-10",
+      "author": "Ibom Data Community",
+      "coverImage": "images/community/hackathon.jpg",
+      "body": "Running our first hackathon taught us more than we expected — not just about data, but about community.\n\n1. Team formation matters more than skill level. The strongest teams weren't always the most technically experienced — they were the ones who communicated well from hour one.\n\n2. Real datasets beat toy datasets. Giving teams messy, real-world data forced genuinely useful problem-solving instead of textbook exercises.\n\n3. Mentors are more valuable than prizes. The teams that checked in with mentors regularly produced noticeably stronger final presentations.\n\n4. Time-boxing saves projects. Teams that planned their day in blocks finished; teams that didn't were still cleaning data an hour before judging.\n\n5. The community showed up. From volunteers to judges to the people who just came to cheer teams on, it was a reminder of why we do this.\n\nWe're already planning the next one — bigger, with more real-world partners."
+    }
+  ]
+}

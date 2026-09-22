@@ -1,0 +1,133 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "team"
+    label: "Team Members"
+    files:
+      - file: "data/team.json"
+        label: "Team Page"
+        name: "team"
+        fields:
+          - label: "Members"
+            name: "members"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "Twitter / X URL", name: "twitter", widget: "string", required: false }
+
+  - name: "spotlight"
+    label: "Member Spotlight"
+    files:
+      - file: "data/spotlight.json"
+        label: "Spotlight Rotation"
+        name: "spotlight"
+        fields:
+          - label: "Spotlights"
+            name: "spotlights"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Link Slug"
+                name: "slug"
+                widget: "string"
+                required: false
+                hint: "Used for the shareable link, e.g. \"jane-umoh\". Lowercase, words separated by hyphens. Leave blank to auto-generate from the name."
+              - { label: "Role / Title", name: "role", widget: "string", default: "Community Member of the Week" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "birthdays"
+    label: "Birthdays"
+    files:
+      - file: "data/birthdays.json"
+        label: "Birthdays"
+        name: "birthdays"
+        fields:
+          - label: "Birthdays"
+            name: "birthdays"
+            widget: "list"
+            summary: "{{name}} — {{date}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Link Slug"
+                name: "slug"
+                widget: "string"
+                required: false
+                hint: "Used for the shareable link. Leave blank to auto-generate from the name."
+              - label: "Date"
+                name: "date"
+                widget: "string"
+                hint: "Format MM-DD only, e.g. \"03-17\" for March 17th — no year, since this repeats every year."
+              - { label: "Birthday Message", name: "message", widget: "text", hint: "A short shoutout shown on their birthday." }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+        hint: "Add these ahead of time — the site automatically shows the right one on the matching date, taking priority over the regular Member of the Week that day."
+
+  - name: "events"
+    label: "Our Events"
+    files:
+      - file: "data/events.json"
+        label: "Events Archive"
+        name: "events"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            summary: "{{title}} — {{kind}}"
+            fields:
+              - label: "Role on Homepage"
+                name: "kind"
+                widget: "select"
+                hint: "Exactly one event should be \"primary\" (the large featured photo) and exactly one should be \"next\" (the upcoming invitation banner). The rest should be \"past\" (the three smaller supporting entries)."
+                options: [
+                  { label: "Primary feature (largest, most recent past event)", value: "primary" },
+                  { label: "Past — supporting entry", value: "past" },
+                  { label: "Next up — upcoming event banner", value: "next" }
+                ]
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Status"
+                name: "status"
+                widget: "string"
+                hint: "e.g. Past Event, Completed, Next Up — shown as a small label, never \"Coming Soon\" for an event that already happened."
+              - { label: "Theme / Tagline", name: "theme", widget: "string", required: false }
+              - { label: "Date", name: "date", widget: "string", required: false, hint: "Only used for the upcoming (\"next\") event, e.g. 31 October 2026" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image", required: false, hint: "Required for primary and past events; not used for the upcoming banner" }
+              - { label: "Link (page file, e.g. hackathon-2025.html)", name: "link", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+
+  - name: "blog"
+    label: "Blog"
+    files:
+      - file: "data/blog.json"
+        label: "Blog Posts"
+        name: "blog"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "Used in the URL, e.g. \"my-post-title\" → blog-post.html?slug=my-post-title. Lowercase, words separated by hyphens, no spaces."
+              - { label: "Excerpt", name: "excerpt", widget: "text", hint: "One or two sentences shown on the blog list page." }
+              - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "Author", name: "author", widget: "string", default: "Ibom Data Community" }
+              - { label: "Cover Photo", name: "coverImage", widget: "image" }
+              - label: "Body"
+                name: "body"
+                widget: "text"
+                hint: "Plain text. Leave a blank line between paragraphs — each becomes its own paragraph on the page."

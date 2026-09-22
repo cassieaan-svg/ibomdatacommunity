@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "kind": "past",
+      "title": "Ibom Data Connect 2024",
+      "status": "Past Event",
+      "theme": "Driving Innovation Through Data",
+      "description": "Our inaugural Data Connect brought together data enthusiasts, practitioners and speakers for a day of learning, workshops and networking.",
+      "image": "images/community/group-photo.jpg",
+      "link": "data-connect-2024.html",
+      "linkText": "View Highlights →"
+    },
+    {
+      "kind": "past",
+      "title": "Tech Mixer 2025",
+      "status": "Past Event",
+      "theme": "",
+      "description": "An evening of conversations, connections and community — bringing technology and data enthusiasts together in a relaxed setting.",
+      "image": "images/community/techmixer.jpg",
+      "link": "tech-mixer-2025.html",
+      "linkText": "View Recap →"
+    },
+    {
+      "kind": "past",
+      "title": "IDC Hackathon",
+      "status": "Completed",
+      "theme": "",
+      "description": "Teams turned real-world data challenges into practical solutions, putting their problem-solving and data skills to work.",
+      "image": "images/community/hackathon.jpg",
+      "link": "hackathon-2025.html",
+      "linkText": "View Results →"
+    },
+    {
+      "kind": "primary",
+      "title": "Ibom Data Connect 2.0",
+      "status": "Past Event",
+      "theme": "The Human Advantage in a Data-Driven AI World",
+      "description": "Our second Data Connect brought the community together around data, AI, emerging technologies and the people building with them.",
+      "image": "images/community/idc2-primary.jpg",
+      "link": "ibom-data-connect-2025.html",
+      "linkText": "View Highlights →"
+    },
+    {
+      "kind": "next",
+      "title": "Ibom Data Connect 3.0",
+      "status": "Next Up",
+      "theme": "Beyond Automation: The Data Powering AI Agents",
+      "date": "31 October 2026",
+      "description": "A one-day community event exploring the data behind AI agents, emerging technologies and the ideas shaping what comes next.",
+      "link": "ibom-data-connect-3.html",
+      "linkText": "Explore IDC 3.0 →"
+    }
+  ]
+}

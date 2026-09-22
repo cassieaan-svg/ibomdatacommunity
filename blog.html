@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — Ibom Data Community</title>
+  <meta name="description" content="Stories, lessons and ideas from Ibom Data Community — event recaps, tutorials and reflections from our data community in Akwa Ibom."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .blog-hero{background:linear-gradient(135deg,#0D1F0A 0%,#1A3D0F 60%,#2D6618 100%);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
+    .blog-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;border-radius:50%;background:var(--orange);opacity:.06;}
+    .blog-hero h1{color:white;margin-bottom:14px;position:relative;z-index:1;}
+    .blog-hero p{color:rgba(255,255,255,.68);font-size:1.05rem;max-width:560px;margin:0 auto;position:relative;z-index:1;}
+
+    .blog-list{display:flex;flex-direction:column;}
+    .blog-post-item{
+      display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:center;
+      padding:32px 0;border-bottom:1px solid var(--border-light);
+    }
+    .blog-post-item:first-child{padding-top:0;}
+    .blog-post-thumb{
+      position:relative;width:100%;aspect-ratio:4/3;border-radius:var(--radius);
+      overflow:hidden;background:var(--cream);box-shadow:var(--shadow);
+    }
+    .blog-post-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+    .blog-post-item:hover .blog-post-thumb img{transform:scale(1.04);}
+    .blog-post-meta{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-light);margin-bottom:8px;display:block;}
+    .blog-post-body h2{font-size:clamp(1.15rem,2vw,1.5rem);margin-bottom:8px;}
+    .blog-post-body p{font-size:.94rem;color:var(--text-mid);margin-bottom:14px;max-width:600px;}
+    .blog-post-cta{display:inline-flex;align-items:center;gap:6px;color:var(--orange);font-weight:700;font-size:.88rem;}
+    .blog-post-cta-arrow{display:inline-block;transition:transform .2s ease;}
+    .blog-post-item:hover .blog-post-cta-arrow{transform:translateX(4px);}
+
+    .blog-empty{text-align:center;padding:40px 0;color:var(--text-light);}
+
+    @media(max-width:640px){
+      .blog-post-item{grid-template-columns:1fr;gap:16px;}
+      .blog-post-thumb{aspect-ratio:16/10;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="ibomdata%20logo.jpeg" alt="Ibom Data Community"/></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <ul class="dropdown-menu">
+          <li><a href="data-connect-2024.html">📅 Data Connect Uyo 2024</a></li>
+          <li><a href="hackathon-2025.html">🏆 Hackathon 2025</a></li>
+          <li><a href="tech-mixer-2025.html">🎉 Tech Mixer 2025</a></li>
+          <li><a href="ibom-data-connect-2025.html">📅 Ibom Data Connect 2.0</a></li>
+          <li><a href="ibom-data-connect-3.html">🚀 Ibom Data Connect 3.0 (2026)</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="https://forms.gle/GvVMkUcGDKdPKGCW6">Contact</a></li>
+    </ul>
+    <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary nav-cta">Join Community</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+    <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="data-connect-2024.html">Data Connect Uyo 2024</a>
+  <a href="hackathon-2025.html">Hackathon 2025</a>
+  <a href="tech-mixer-2025.html">Tech Mixer 2025</a>
+  <a href="ibom-data-connect-2025.html">Ibom Data Connect 2.0</a>
+  <a href="ibom-data-connect-3.html">Ibom Data Connect 3.0 (2026)</a>
+  <a href="blog.html">Blog</a>
+  <a href="resources.html">Resources</a>
+  <a href="team.html">Team</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="https://forms.gle/GvVMkUcGDKdPKGCW6">Contact</a>
+  <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary" style="text-align:center">Join Community</a>
+</div>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="tag" style="background:rgba(247,146,30,.15);color:var(--orange);margin-bottom:16px;">Blog</div>
+    <h1>Stories From the Community</h1>
+    <p>Event recaps, practical lessons and honest reflections from the people building Ibom Data Community.</p>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section class="section section-white">
+  <div class="container" style="max-width:820px;">
+    <div class="blog-list" id="blogList">
+      <noscript><p>Enable JavaScript to view blog posts.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><img src="ibomdata%20logo.jpeg" alt="Ibom Data Community"/></div><p>A vibrant nonprofit community advancing data education and fostering inclusive innovation in Akwa Ibom and beyond.</p></div>
+      <div><h5>Pages</h5><ul><li><a href="index.html">Home</a></li><li><a href="blog.html">Blog</a></li><li><a href="team.html">Team</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="resources.html">Resources</a></li></ul></div>
+      <div><h5>Events</h5><ul><li><a href="data-connect-2024.html">Data Connect 2024</a></li><li><a href="hackathon-2025.html">Hackathon 2025</a></li><li><a href="tech-mixer-2025.html">Tech Mixer 2025</a></li><li><a href="ibom-data-connect-2025.html">Data Connect 2.0</a></li><li><a href="ibom-data-connect-3.html">Data Connect 3.0</a></li></ul></div>
+      <div><h5>Connect</h5><ul><li><a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a></li><li><a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/ibomdata" target="_blank" rel="noopener">X / Twitter</a></li><li><a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Ibom Data Community. All rights reserved.</span><div class="social-links"><a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/ibomdata" target="_blank" rel="noopener">X / Twitter</a><a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/+qV1_0I_eZ5g2OTY0" target="_blank" rel="noopener">Telegram</a></div></div>
+  </div>
+</footer>
+<script>function toggleMobileNav(){document.getElementById('mobileNav').classList.toggle('open');}</script>
+<script src="js/main.js"></script>
+<script src="js/content.js"></script>
+</body>
+</html>
