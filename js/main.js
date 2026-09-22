@@ -1,31 +1,50 @@
 /* Ibom Data Community — shared site interactivity
-   Dark mode toggle, animated counters, scroll-reveal. No dependencies. */
+   Slide-in nav panel, animated counters, scroll-reveal. No dependencies. */
 
 (function () {
-  var stored = localStorage.getItem('idc-theme');
-  var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
-
-  function updateToggleIcons() {
-    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
-      btn.textContent = isDark ? '☀️' : '🌙';
-      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-    });
-  }
-
-  window.toggleTheme = function () {
-    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('idc-theme', next);
-    updateToggleIcons();
-  };
-
   document.addEventListener('DOMContentLoaded', function () {
-    updateToggleIcons();
     setupCounters();
     setupReveal();
+    setupMobileNav();
   });
+
+  function setupMobileNav() {
+    var panel = document.getElementById('mobileNav');
+    var overlay = document.getElementById('navOverlay');
+    if (!panel) return;
+
+    function open() {
+      panel.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      panel.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    window.toggleMobileNav = function () {
+      if (panel.classList.contains('open')) close(); else open();
+    };
+
+    if (overlay) overlay.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+
+    // Accordion (Events) inside the panel
+    panel.querySelectorAll('.nav-panel-accordion-trigger').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        trigger.closest('.nav-panel-accordion').classList.toggle('open');
+      });
+    });
+
+    // Close on any real navigation link click (not the accordion trigger itself)
+    panel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', close);
+    });
+  }
 
   function setupCounters() {
     var counters = document.querySelectorAll('.hero-stat .n, .stat-block .stat-number, .achievement-number');
@@ -70,7 +89,10 @@
   function setupReveal() {
     var selector = '.team-card, .achievement-card, .partner-card, ' +
       '.story-card, .upcoming-event-card, .prize-card, .pillar, .spotlight-card, .timeline-item, ' +
-      '.card, .sponsor-card, .story-photo, .story-secondary-item';
+      '.card, .sponsor-card, .story-photo, .story-secondary-item, ' +
+      '.res-card, .faq-item, .experience-card, .speaker-card, .why-card, ' +
+      '.blog-post-item, .event-secondary, .event-primary, .event-next, .idc-tip, ' +
+      '.section-header, .final-cta-inner';
     var targets = document.querySelectorAll(selector);
     if (!targets.length) return;
 

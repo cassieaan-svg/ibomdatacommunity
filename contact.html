@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Ibom Data Community</title>
+  <meta name="description" content="Get in touch with Ibom Data Community — email us, follow our socials, or send us a message."/>
+  <link rel="stylesheet" href="style.css?v=2"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, #0F1F0A 0%, #1C3D12 60%, #0F2C08 100%);
+      padding: 110px 0 72px;
+      text-align: center;
+    }
+    .contact-hero .badge {
+      display: inline-block;
+      background: rgba(30,136,0,.18);
+      color: var(--green);
+      border: 1px solid rgba(30,136,0,.35);
+      border-radius: 40px;
+      padding: 6px 20px;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .contact-hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+    .contact-hero p {
+      color: rgba(255,255,255,.72);
+      font-size: 1.1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .contact-body { background: var(--cream); padding: 72px 0; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 32px;
+      align-items: start;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, #0F1F0A 0%, #1C3D12 60%, #0F2C08 100%);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      box-shadow: var(--shadow);
+    }
+    .contact-info h3 { color: #fff; font-size: 1.3rem; margin: 0 0 10px; }
+    .contact-info > p { color: rgba(255,255,255,.65); font-size: .92rem; line-height: 1.6; margin: 0 0 28px; }
+
+    .contact-line {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .contact-line:first-of-type { border-top: none; }
+    .contact-line .icon-badge {
+      width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(247,146,30,.15); border: 1px solid rgba(247,146,30,.35);
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .contact-line a, .contact-line span.label-text {
+      color: #fff; font-weight: 700; font-size: .95rem; word-break: break-word;
+    }
+    .contact-line a:hover { color: var(--orange); }
+    .contact-line .l { display: block; color: rgba(255,255,255,.5); font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+
+    .contact-socials { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); }
+    .contact-socials .l { display: block; color: rgba(255,255,255,.5); font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 14px; }
+    .contact-social-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .contact-social-row a {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15);
+      color: #fff; font-size: .85rem; font-weight: 600;
+      padding: 9px 16px; border-radius: 40px; transition: all .2s ease;
+    }
+    .contact-social-row a:hover { background: var(--orange); border-color: var(--orange); transform: translateY(-2px); }
+
+    .contact-form-card {
+      background: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+      border: 1px solid var(--border-light); padding: 40px 36px;
+    }
+    .contact-form-card h3 { font-size: 1.3rem; margin: 0 0 6px; }
+    .contact-form-card > p { color: var(--text-light); font-size: .92rem; margin: 0 0 28px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block; font-size: .85rem; font-weight: 700; color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border-radius: 10px;
+      border: 1px solid var(--border); font-family: 'Inter', sans-serif;
+      font-size: .94rem; color: var(--text-dark); background: var(--cream);
+      transition: border-color .2s ease;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--orange); background: #fff;
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+
+    .contact-form-card button[type="submit"] {
+      width: 100%; border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+    }
+
+    .form-note { font-size: .8rem; color: var(--text-light); margin-top: 14px; text-align: center; }
+
+    @media (max-width: 760px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-card { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/logo-new.png" alt="Ibom Data Community"/></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <ul class="dropdown-menu">
+          <li><a href="data-connect-2024.html">📅 Ibom Data Connect 1.0</a></li>
+          <li><a href="hackathon-2025.html">🏆 Hackathon 2025</a></li>
+          <li><a href="tech-mixer-2025.html">🎉 Tech Mixer 2025</a></li>
+          <li><a href="ibom-data-connect-2025.html">📅 Ibom Data Connect 2.0</a></li>
+          <li><a href="ibom-data-connect-3.html">🚀 Ibom Data Connect 3.0 (2026)</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary nav-cta">Join Community</a>
+    <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="nav-panel-header">
+    <img class="nav-panel-logo" src="images/logo-new.png" alt="Ibom Data Community"/>
+    <button class="nav-panel-close" onclick="toggleMobileNav()" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="nav-panel-links">
+    <a href="index.html">Home</a>
+    <div class="nav-panel-accordion">
+      <button type="button" class="nav-panel-accordion-trigger">Events <span class="chev">⌄</span></button>
+      <div class="nav-panel-accordion-body">
+        <a href="data-connect-2024.html">Ibom Data Connect 1.0</a>
+        <a href="hackathon-2025.html">Hackathon 2025</a>
+        <a href="tech-mixer-2025.html">Tech Mixer 2025</a>
+        <a href="ibom-data-connect-2025.html">Ibom Data Connect 2.0</a>
+        <a href="ibom-data-connect-3.html">Ibom Data Connect 3.0</a>
+      </div>
+    </div>
+    <a href="blog.html">Blog</a>
+    <a href="resources.html">Resources</a>
+    <a href="team.html">Team</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" target="_blank" class="btn btn-primary nav-panel-cta">Join Community</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="contact-hero">
+  <div class="container">
+    <span class="badge">Get In Touch</span>
+    <h1>Let's Start a Conversation.</h1>
+    <p>Questions, ideas, partnership proposals, or just want to say hi? We'd love to hear from you.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT BODY ── -->
+<section class="contact-body">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- INFO CARD -->
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p>Reach us directly by email, or follow along and message us on social media — we're active and responsive on all of these.</p>
+
+        <div class="contact-line">
+          <span class="icon-badge">📧</span>
+          <div><span class="l">Email</span><a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a></div>
+        </div>
+
+        <div class="contact-socials">
+          <span class="l">Follow &amp; Message Us</span>
+          <div class="contact-social-row">
+            <a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener">💼 LinkedIn</a>
+            <a href="https://x.com/ibomdata" target="_blank" rel="noopener">🐦 X / Twitter</a>
+            <a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener">📘 Facebook</a>
+            <a href="https://t.me/+qV1_0I_eZ5g2OTY0" target="_blank" rel="noopener">✈️ Telegram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM CARD -->
+      <div class="contact-form-card">
+        <h3>Send Us a Message</h3>
+        <p>Fill in the form below — it'll open in your email app, pre-filled and ready to send.</p>
+        <form id="contactForm" action="mailto:ibomdatacommunity@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" name="Name" placeholder="Your name" required/>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="Email" placeholder="you@example.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <select id="cf-subject" name="Subject">
+              <option>General Enquiry</option>
+              <option>Joining the Community</option>
+              <option>Partnership / Sponsorship</option>
+              <option>Volunteer / Mentor</option>
+              <option>Event Question</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="Message" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+        </form>
+        <p class="form-note">Prefer email directly? Write to us at <a href="mailto:ibomdatacommunity@gmail.com" style="color:var(--orange);font-weight:700;">ibomdatacommunity@gmail.com</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <img class="footer-logo-img" src="images/logo-new.png" alt="Ibom Data Community"/>
+    <div class="footer-bottom"><span>© 2026 Ibom Data Community. All rights reserved.</span><div class="social-links"><a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/ibomdata" target="_blank" rel="noopener">X / Twitter</a><a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/+qV1_0I_eZ5g2OTY0" target="_blank" rel="noopener">Telegram</a></div></div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=2"></script>
+</body>
+</html>

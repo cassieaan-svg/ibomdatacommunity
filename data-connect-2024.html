@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Connect Uyo 2024 — Ibom Data Community</title>
-  <meta name="description" content="Ibom Data Connect 2024: Driving Innovation Through Data. A landmark event in Uyo, Akwa Ibom — learning, networking, and innovation." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Ibom Data Connect 1.0 — Ibom Data Community</title>
+  <meta name="description" content="Ibom Data Connect 1.0: Driving Innovation Through Data. A landmark event in Uyo, Akwa Ibom — learning, networking, and innovation." />
+  <link rel="stylesheet" href="style.css?v=2" />
   <style>
     .dc-hero { background:linear-gradient(135deg,#0D2137 0%,#1A3A5C 60%,#245080 100%); color:white; padding:90px 0; position:relative; overflow:hidden; }
     .dc-hero::before { content:''; position:absolute; top:-100px; right:-80px; width:500px; height:500px; border-radius:50%; background:#2c88f7; opacity:.08; }
@@ -41,15 +41,14 @@
 <nav class="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="logo-mark">IDC</div>
-      <span>Ibom Data Community</span>
+      <img src="images/logo-new.png" alt="Ibom Data Community"/>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
         <a href="#" class="active">Events</a>
         <ul class="dropdown-menu">
-          <li><a href="data-connect-2024.html">📅 Data Connect Uyo 2024</a></li>
+          <li><a href="data-connect-2024.html">📅 Ibom Data Connect 1.0</a></li>
           <li><a href="hackathon-2025.html">🏆 Hackathon 2025</a></li>
           <li><a href="tech-mixer-2025.html">🎉 Tech Mixer 2025</a></li>
           <li><a href="ibom-data-connect-2025.html">📅 Ibom Data Connect 2.0</a></li>
@@ -60,28 +59,39 @@
       <li><a href="resources.html">Resources</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="faqs.html">FAQs</a></li>
-      <li><a href="https://forms.gle/GvVMkUcGDKdPKGCW6">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary nav-cta">Join Community</a>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
     <div class="hamburger" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay"></div>
 <div class="mobile-nav" id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="data-connect-2024.html">Data Connect Uyo 2024</a>
-  <a href="hackathon-2025.html">Hackathon 2025</a>
-  <a href="tech-mixer-2025.html">Tech Mixer 2025</a>
-  <a href="ibom-data-connect-2025.html">Ibom Data Connect 2.0</a>
-  <a href="ibom-data-connect-3.html">Ibom Data Connect 3.0 (2026)</a>
-  <a href="blog.html">Blog</a>
-  <a href="resources.html">Resources</a>
-  <a href="team.html">Team</a>
-  <a href="faqs.html">FAQs</a>
-  <a href="https://forms.gle/GvVMkUcGDKdPKGCW6">Contact</a>
-  <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary" style="text-align:center">Join Community</a>
+  <div class="nav-panel-header">
+    <img class="nav-panel-logo" src="images/logo-new.png" alt="Ibom Data Community"/>
+    <button class="nav-panel-close" onclick="toggleMobileNav()" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="nav-panel-links">
+    <a href="index.html">Home</a>
+    <div class="nav-panel-accordion">
+      <button type="button" class="nav-panel-accordion-trigger">Events <span class="chev">⌄</span></button>
+      <div class="nav-panel-accordion-body">
+        <a href="data-connect-2024.html">Ibom Data Connect 1.0</a>
+        <a href="hackathon-2025.html">Hackathon 2025</a>
+        <a href="tech-mixer-2025.html">Tech Mixer 2025</a>
+        <a href="ibom-data-connect-2025.html">Ibom Data Connect 2.0</a>
+        <a href="ibom-data-connect-3.html">Ibom Data Connect 3.0</a>
+      </div>
+    </div>
+    <a href="blog.html">Blog</a>
+    <a href="resources.html">Resources</a>
+    <a href="team.html">Team</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" target="_blank" class="btn btn-primary nav-panel-cta">Join Community</a>
 </div>
 
 <!-- HERO -->
@@ -89,11 +99,12 @@
   <div class="container dc-hero-inner">
     <div>
       <div class="tag" style="background:rgba(99,172,247,.2);color:#63acf7;">📅 Past Event — 2024</div>
-      <h1>Ibom Data Connect 2024:<br/><span>Driving Innovation Through Data</span></h1>
+      <h1>Ibom Data Connect 1.0:<br/><span>Driving Innovation Through Data</span></h1>
       <p class="sub">Unlocking the Power of Data in Uyo. An unforgettable day of learning, networking, and innovation that brought together 100+ data enthusiasts from across the region.</p>
       <div class="dc-hero-actions">
         <a href="#highlights" class="btn btn-primary">View Highlights</a>
         <a href="hackathon-2025.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);">See Hackathon 2025 →</a>
+        <a href="contact.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);">Contact Us</a>
       </div>
     </div>
     <div class="dc-visual">
@@ -114,7 +125,7 @@
     <div class="section-header">
       <div class="tag">What We Delivered</div>
       <h2>Experience the Data Revolution</h2>
-      <p>Three pillars that made Ibom Data Connect 2024 a day to remember.</p>
+      <p>Three pillars that made Ibom Data Connect 1.0 a day to remember.</p>
     </div>
     <div class="card-grid-3">
       <div class="experience-card">
@@ -193,14 +204,14 @@
     <div class="section-header">
       <div class="tag">Recap</div>
       <h2>Event Highlights: A Day of Innovation</h2>
-      <p>Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Data Innovation Uyo 2024.</p>
+      <p>Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Ibom Data Connect 1.0.</p>
     </div>
     <div class="highlight-gallery">
       <div class="highlight-img">🎓</div>
       <div class="highlight-img">🤝</div>
       <div class="highlight-img">📊</div>
     </div>
-    <p style="text-align:center;color:var(--text-light);margin-bottom:28px;font-size:.9rem;">Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Data Innovation Uyo 2024.</p>
+    <p style="text-align:center;color:var(--text-light);margin-bottom:28px;font-size:.9rem;">Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Ibom Data Connect 1.0.</p>
     <div style="text-align:center;">
       <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary">Join the Community</a>
     </div>
@@ -229,7 +240,7 @@
   <div class="container">
     <div class="section-header">
       <div class="tag">By the Numbers</div>
-      <h2>Data Innovation Uyo 2024 in Numbers</h2>
+      <h2>Ibom Data Connect 1.0 in Numbers</h2>
     </div>
     <div class="stats-grid">
       <div class="stat-block">
@@ -315,7 +326,7 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px;">
-          <h3 style="color:white;margin-bottom:16px;">Miss Data Connect 2024?</h3>
+          <h3 style="color:white;margin-bottom:16px;">Miss Data Connect 1.0?</h3>
           <p style="margin-bottom:24px;">Don't miss the next one! Join our community to be the first to know about upcoming events, workshops, and hackathons.</p>
           <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-primary" style="width:100%;text-align:center;display:block;padding:14px;">Join the Community</a>
         </div>
@@ -331,58 +342,20 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo-mark">IDC</div>
-        <strong style="color:white;font-size:1rem;">Ibom Data Community</strong>
-        <p>A vibrant nonprofit community advancing data education and fostering inclusive innovation in Akwa Ibom and beyond.</p>
-      </div>
-      <div>
-        <h5>Pages</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Events</h5>
-        <ul>
-          <li><a href="data-connect-2024.html">Data Connect 2024</a></li>
-          <li><a href="hackathon-2025.html">Hackathon 2025</a></li>
-          <li><a href="tech-mixer-2025.html">Tech Mixer 2025</a></li>
-          <li><a href="ibom-data-connect-2025.html">Data Connect 2.0</a></li>
-          <li><a href="ibom-data-connect-3.html">Data Connect 3.0</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Connect</h5>
-        <ul>
-          <li><a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Twitter / X</a></li>
-        </ul>
-      </div>
-    </div>
+    <img class="footer-logo-img" src="images/logo-new.png" alt="Ibom Data Community"/>
     <div class="footer-bottom">
-      <span>© 2025 Ibom Data Community. All rights reserved.</span>
+      <span>© 2026 Ibom Data Community. All rights reserved.</span>
       <div class="social-links">
-        <a href="#">📘 Facebook</a>
-        <a href="#">💼 LinkedIn</a>
-        <a href="#">🐦 X / Twitter</a>
+        <a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/ibomdata" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://t.me/+qV1_0I_eZ5g2OTY0" target="_blank" rel="noopener">Telegram</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script>
-  function toggleMobileNav() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
-</script>
-<script src="js/main.js"></script>
+
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
