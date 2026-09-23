@@ -1,11 +1,3 @@
 {
-  "birthdays": [
-    {
-      "slug": "sample-birthday",
-      "name": "Add a member's birthday",
-      "date": "01-01",
-      "message": "This is a placeholder. Open /admin → Birthdays and add a real member's name, date (MM-DD) and photo — it will automatically show here on their birthday.",
-      "photo": ""
-    }
-  ]
+  "birthdays": []
 }

@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   var eventsArchive = document.getElementById('eventsArchive');
   if (eventsArchive) {
-    fetch('data/events.json')
+    fetch('data/events.json?t=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(function (data) { renderEvents(eventsArchive, data.events || []); })
       .catch(function () { /* keep section empty, page still works */ });
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var teamGrid = document.getElementById('teamGrid');
   if (teamGrid) {
-    fetch('data/team.json')
+    fetch('data/team.json?t=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(function (data) { renderTeam(teamGrid, data.members || []); })
       .catch(function () { });
@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var spotlightCard = document.getElementById('spotlightCard');
   if (spotlightCard) {
     Promise.all([
-      fetch('data/spotlight.json').then(function (r) { return r.json(); }).catch(function () { return { spotlights: [] }; }),
-      fetch('data/birthdays.json').then(function (r) { return r.json(); }).catch(function () { return { birthdays: [] }; })
+      fetch('data/spotlight.json?t=' + Date.now()).then(function (r) { return r.json(); }).catch(function () { return { spotlights: [] }; }),
+      fetch('data/birthdays.json?t=' + Date.now()).then(function (r) { return r.json(); }).catch(function () { return { birthdays: [] }; })
     ]).then(function (results) {
-      initSpotlight(results[0].spotlights || [], results[1].birthdays || []);
+      initSpotlightSection(results[0].spotlights || [], results[1].birthdays || []);
     });
   }
 
   var blogList = document.getElementById('blogList');
   if (blogList) {
-    fetch('data/blog.json')
+    fetch('data/blog.json?t=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(function (data) { renderBlogList(blogList, data.posts || []); })
       .catch(function () { });
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var postBody = document.getElementById('postBody');
   if (postBody) {
-    fetch('data/blog.json')
+    fetch('data/blog.json?t=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(function (data) { renderBlogPost(data.posts || []); })
       .catch(function () { });
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'member';
   }
 
-  function initSpotlight(spotlights, birthdays) {
+  function initSpotlightSection(spotlights, birthdays) {
     var todayMD = (function () {
       var d = new Date();
       return String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -159,24 +159,64 @@ document.addEventListener('DOMContentLoaded', function () {
         };
       });
 
-    // Birthdays today take priority — shown first, still browsable via the arrows
-    var list = todaysBirthdays.concat((spotlights || []).map(function (m) {
+    var spotlightList = (spotlights || []).map(function (m) {
       return { slug: m.slug || slugify(m.name), name: m.name, role: m.role, quote: m.quote, photo: m.photo };
-    }));
-
-    if (!list.length) return;
+    });
 
     var params = new URLSearchParams(window.location.search);
     var wantedSlug = params.get('member');
+
+    setupCarousel({
+      list: spotlightList,
+      block: document.getElementById('spotlightBlock'),
+      card: document.getElementById('spotlightCard'),
+      prevBtn: document.getElementById('spotlightPrev'),
+      nextBtn: document.getElementById('spotlightNext'),
+      wantedSlug: wantedSlug,
+      emptyState: {
+        name: 'Coming Soon',
+        quote: "We're just getting started — check back soon to meet our next Community Member of the Week."
+      }
+    });
+
+    setupCarousel({
+      list: todaysBirthdays,
+      block: document.getElementById('birthdayBlock'),
+      card: document.getElementById('birthdayCard'),
+      prevBtn: document.getElementById('birthdayPrev'),
+      nextBtn: document.getElementById('birthdayNext'),
+      wantedSlug: wantedSlug
+    });
+  }
+
+  function setupCarousel(opts) {
+    var list = opts.list, block = opts.block, card = opts.card;
+    var prevBtn = opts.prevBtn, nextBtn = opts.nextBtn;
+    if (!block || !card) return;
+
+    if (!list.length) {
+      if (!opts.emptyState) return;
+      block.style.display = '';
+      card.classList.remove('is-birthday');
+      card.innerHTML =
+        '<div class="spotlight-avatar">⭐</div>' +
+        '<p class="spotlight-quote">' + escapeHtml(opts.emptyState.quote) + '</p>' +
+        '<div class="spotlight-name">' + escapeHtml(opts.emptyState.name) + '</div>';
+      window.idcRevealNow && window.idcRevealNow(card);
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      return;
+    }
+
+    block.style.display = '';
+
     var deepLinked = false;
     var idx = 0;
-    if (wantedSlug) {
-      var found = list.findIndex(function (m) { return m.slug === wantedSlug; });
+    if (opts.wantedSlug) {
+      var found = list.findIndex(function (m) { return m.slug === opts.wantedSlug; });
       if (found !== -1) { idx = found; deepLinked = true; }
     }
 
-    var prevBtn = document.getElementById('spotlightPrev');
-    var nextBtn = document.getElementById('spotlightNext');
     var timer = null;
 
     function render() {
@@ -184,8 +224,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var avatar = m.photo
         ? '<img src="' + escapeHtml(m.photo) + '" alt="' + escapeHtml(m.name) + '"/>'
         : '⭐';
-      spotlightCard.classList.toggle('is-birthday', !!m.isBirthday);
-      spotlightCard.innerHTML =
+      card.classList.toggle('is-birthday', !!m.isBirthday);
+      card.innerHTML =
         '<div class="spotlight-avatar">' + avatar + '</div>' +
         '<p class="spotlight-quote">"' + escapeHtml(m.quote) + '"</p>' +
         '<div class="spotlight-name">' + escapeHtml(m.name) + '</div>' +
@@ -194,9 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
           '<button type="button" class="spotlight-share" data-slug="' + escapeHtml(m.slug) + '">Copy Link</button>' +
           '<button type="button" class="spotlight-download">Download</button>' +
         '</div>';
-      window.idcRevealNow && window.idcRevealNow(spotlightCard);
+      window.idcRevealNow && window.idcRevealNow(card);
 
-      var shareBtn = spotlightCard.querySelector('.spotlight-share');
+      var shareBtn = card.querySelector('.spotlight-share');
       shareBtn.addEventListener('click', function () {
         var url = window.location.origin + window.location.pathname + '?member=' + encodeURIComponent(m.slug) + '#shine-a-light';
         var done = function () {
@@ -211,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      var downloadBtn = spotlightCard.querySelector('.spotlight-download');
+      var downloadBtn = card.querySelector('.spotlight-download');
       downloadBtn.addEventListener('click', function () {
         if (downloadBtn.disabled) return;
         downloadBtn.disabled = true;
