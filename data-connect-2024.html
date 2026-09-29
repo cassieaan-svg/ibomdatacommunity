@@ -22,16 +22,11 @@
     .dc-stat .n { font-size:2rem; font-weight:800; color:#8fd672; display:block; }
     .dc-stat .l { font-size:.78rem; color:rgba(255,255,255,.6); margin-top:4px; }
     .experience-card { background:var(--white); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); border:1px solid var(--border-light); text-align:center; }
-    .experience-icon { font-size:2.5rem; margin-bottom:16px; }
     .why-card { background:var(--cream); border-radius:var(--radius); padding:28px; border-top:3px solid var(--orange); }
     .why-card h4 { margin-bottom:8px; color:var(--orange); }
-    .speaker-card { background:var(--white); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); border:1px solid var(--border-light); text-align:center; }
-    .speaker-img { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,var(--green),#4DC93A); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 16px; }
-    .stay-connected-list { display:flex; flex-direction:column; gap:20px; }
-    .stay-item { display:flex; gap:20px; align-items:flex-start; background:var(--white); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); border:1px solid var(--border-light); }
-    .stay-num { width:36px; height:36px; border-radius:50%; background:var(--orange); color:white; font-weight:700; font-size:.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
     .highlight-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px; }
-    .highlight-img { border-radius:10px; aspect-ratio:4/3; background:linear-gradient(135deg,var(--amber),var(--orange)); display:flex; align-items:center; justify-content:center; font-size:2.5rem; overflow:hidden; }
+    .highlight-img { border-radius:10px; aspect-ratio:4/3; overflow:hidden; box-shadow:var(--shadow); }
+    .highlight-img img { width:100%; height:100%; object-fit:cover; display:block; }
     @media(max-width:900px){.dc-hero-inner{grid-template-columns:1fr}.dc-visual{display:none}.highlight-gallery{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.highlight-gallery{grid-template-columns:1fr}}
   </style>
@@ -48,11 +43,11 @@
       <li class="dropdown">
         <a href="#" class="active">Events</a>
         <ul class="dropdown-menu">
-          <li><a href="data-connect-2024.html">📅 Ibom Data Connect 1.0</a></li>
-          <li><a href="hackathon-2025.html">🏆 Hackathon 2025</a></li>
-          <li><a href="tech-mixer-2025.html">🎉 Tech Mixer 2025</a></li>
-          <li><a href="ibom-data-connect-2025.html">📅 Ibom Data Connect 2.0</a></li>
-          <li><a href="ibom-data-connect-3.html">🚀 Ibom Data Connect 3.0 (2026)</a></li>
+          <li><a href="data-connect-2024.html">Ibom Data Connect 1.0</a></li>
+          <li><a href="hackathon-2025.html">Hackathon 2025</a></li>
+          <li><a href="tech-mixer-2025.html">Tech Mixer 2025</a></li>
+          <li><a href="ibom-data-connect-2025.html">Ibom Data Connect 2.0</a></li>
+          <li><a href="ibom-data-connect-3.html">Ibom Data Connect 3.0 (2026)</a></li>
         </ul>
       </li>
       <li><a href="blog.html">Blog</a></li>
@@ -98,17 +93,17 @@
 <section class="dc-hero">
   <div class="container dc-hero-inner">
     <div>
-      <div class="tag" style="background:rgba(77,201,58,.18);color:#8fd672;">📅 Past Event — 2024</div>
+      <div class="tag" style="background:rgba(77,201,58,.18);color:#8fd672;">Past Event — 2024</div>
       <h1>Ibom Data Connect 1.0:<br/><span>Driving Innovation Through Data</span></h1>
       <p class="sub">Unlocking the Power of Data in Uyo. An unforgettable day of learning, networking, and innovation that brought together 100+ data enthusiasts from across the region.</p>
       <div class="dc-hero-actions">
         <a href="#highlights" class="btn btn-primary">View Highlights</a>
-        <a href="hackathon-2025.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);">See Hackathon 2025 →</a>
         <a href="contact.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);">Contact Us</a>
       </div>
     </div>
     <div class="dc-visual">
-      <h3>📊 Event in Numbers</h3>
+      <img src="images/community/idc1-flyer.jpg" alt="Ibom Data Connect 1.0 event flyer" style="width:100%;border-radius:12px;margin-bottom:24px;display:block;"/>
+      <h3>Event in Numbers</h3>
       <div class="dc-stat-grid">
         <div class="dc-stat"><span class="n">100+</span><div class="l">Data Enthusiasts</div></div>
         <div class="dc-stat"><span class="n">5</span><div class="l">Expert Speakers</div></div>
@@ -129,17 +124,14 @@
     </div>
     <div class="card-grid-3">
       <div class="experience-card">
-        <div class="experience-icon">🎤</div>
         <h4>Expert Keynote Speakers</h4>
         <p>Insights from leading data experts sharing their knowledge, vision, and real-world experiences to inspire and educate attendees.</p>
       </div>
       <div class="experience-card">
-        <div class="experience-icon">🛠️</div>
         <h4>Interactive Sessions &amp; Workshop</h4>
         <p>Hands-on learning opportunities designed to enhance your data skills through practical exercises and guided workshops.</p>
       </div>
       <div class="experience-card">
-        <div class="experience-icon">🤝</div>
         <h4>Meaningful Connections</h4>
         <p>Networking with data professionals and enthusiasts from across Akwa Ibom, creating lasting professional relationships.</p>
       </div>
@@ -157,42 +149,16 @@
     </div>
     <div class="card-grid-3">
       <div class="why-card">
-        <div class="card-icon">⚡</div>
         <h4>Rising Tech Scene</h4>
         <p>Uyo is quickly becoming a hub for technological innovation in Nigeria, with a growing community of tech-savvy professionals and entrepreneurs.</p>
       </div>
       <div class="why-card">
-        <div class="card-icon">📈</div>
         <h4>Stepping into Data</h4>
         <p>Motivating beginners to start their data journey with confidence and clarity, providing accessible entry points into the data profession.</p>
       </div>
       <div class="why-card">
-        <div class="card-icon">🌱</div>
         <h4>Nurturing a Vibrant Community</h4>
         <p>Empowering and strengthening the growing community of data analysts, scientists, and enthusiasts in the region.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPEAKERS -->
-<section class="section section-white">
-  <div class="container">
-    <div class="section-header">
-      <div class="tag">The Lineup</div>
-      <h2>Keynote Speakers &amp; Panel Members</h2>
-      <p>Industry leaders who shared invaluable insights, real experiences, and inspiration.</p>
-    </div>
-    <div class="card-grid-2" style="max-width:760px;margin:0 auto;">
-      <div class="speaker-card">
-        <div class="speaker-img">🎤</div>
-        <h4>Meet the Speakers</h4>
-        <p style="font-size:.88rem;color:var(--text-light);">Visionary leaders and experts who shared valuable insights, real-world experiences, and impactful stories. Practical exercises designed to promote team members to acquire skills.</p>
-      </div>
-      <div class="speaker-card">
-        <div class="speaker-img">🎙️</div>
-        <h4>Meet the Panelists</h4>
-        <p style="font-size:.88rem;color:var(--text-light);">Diverse voices and industry experts sharing practical insights, experiences, and perspectives to inspire and guide your data journey through candid Q&amp;A sessions.</p>
       </div>
     </div>
   </div>
@@ -207,11 +173,13 @@
       <p>Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Ibom Data Connect 1.0.</p>
     </div>
     <div class="highlight-gallery">
-      <div class="highlight-img">🎓</div>
-      <div class="highlight-img">🤝</div>
-      <div class="highlight-img">📊</div>
+      <div class="highlight-img"><img src="images/community/idc1-highlight-1.jpg" alt="Ibom Data Connect 1.0 attendees at the event"/></div>
+      <div class="highlight-img"><img src="images/community/idc1-highlight-2.jpg" alt="Ibom Data Connect 1.0 group photo"/></div>
+      <div class="highlight-img"><img src="images/community/idc1-highlight-3.jpg" alt="Ibom Data Connect 1.0 attendees outside the venue"/></div>
+      <div class="highlight-img"><img src="images/community/idc1-highlight-4.jpg" alt="Ibom Data Connect 1.0 team members"/></div>
+      <div class="highlight-img"><img src="images/community/idc1-highlight-5.jpg" alt="Ibom Data Connect 1.0 volunteers and participants"/></div>
+      <div class="highlight-img"><img src="images/community/idc1-highlight-6.jpg" alt="Ibom Data Connect 1.0 audience during a session"/></div>
     </div>
-    <p style="text-align:center;color:var(--text-light);margin-bottom:28px;font-size:.9rem;">Interactive workshops, inspiring keynote speeches, and valuable networking sessions defined Ibom Data Connect 1.0.</p>
     <div style="text-align:center;">
       <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary">Join the Community</a>
     </div>
@@ -227,10 +195,8 @@
       <p>We are proudly supported by organizations dedicated to fostering innovation and driving data adoption in Nigeria.</p>
     </div>
     <div class="sponsor-grid">
-      <div class="sponsor-card"><div class="sponsor-logo">🌍</div>Ibom Data Community</div>
-      <div class="sponsor-card"><div class="sponsor-logo">🚀</div>Start Innovation Hub</div>
-      <div class="sponsor-card"><div class="sponsor-logo">💎</div>Gem Nexus</div>
-      <div class="sponsor-card"><div class="sponsor-logo">📦</div>TakaShip</div>
+      <div class="sponsor-card"><img src="images/community/gemnexus-logo.jpg" alt="Gem Nexus" style="max-width:140px;max-height:60px;object-fit:contain;margin-bottom:10px;"/>Gem Nexus</div>
+      <div class="sponsor-card"><img src="images/community/start-innovation-hub-logo.png" alt="Start Innovation Hub" style="max-width:140px;max-height:60px;object-fit:contain;margin-bottom:10px;"/>Start Innovation Hub</div>
     </div>
   </div>
 </section>
@@ -263,40 +229,6 @@
   </div>
 </section>
 
-<!-- STAY CONNECTED -->
-<section class="section section-white">
-  <div class="container">
-    <div class="section-header">
-      <div class="tag">Keep Growing</div>
-      <h2>Stay Connected</h2>
-      <p>The event was just the beginning. Here's how to keep the momentum going.</p>
-    </div>
-    <div class="stay-connected-list" style="max-width:700px;margin:0 auto;">
-      <div class="stay-item">
-        <div class="stay-num">1</div>
-        <div>
-          <h4 style="margin-bottom:4px;">Free Learning Resources</h4>
-          <p style="font-size:.9rem;">Simple tools, free resources, and learning paths for beginners — Excel, SQL, Power BI, Python, etc.</p>
-        </div>
-      </div>
-      <div class="stay-item">
-        <div class="stay-num">2</div>
-        <div>
-          <h4 style="margin-bottom:4px;">Community Support</h4>
-          <p style="font-size:.9rem;">Access to learning support, projects, mentorship, and meetups within the Ibom Data Community network.</p>
-        </div>
-      </div>
-      <div class="stay-item">
-        <div class="stay-num">3</div>
-        <div>
-          <h4 style="margin-bottom:4px;">Grow Through Collaboration</h4>
-          <p style="font-size:.9rem;">Tips for staying consistent, joining a community, and growing through collaboration with like-minded data enthusiasts.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="container">
@@ -307,7 +239,6 @@
         <p>Stay updated on all event news, insider tips, and networking opportunities. Follow us on our social channels.</p>
         <div class="contact-info">
           <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
             <div class="contact-item-text">
               <strong>Contact Us</strong>
               <a href="mailto:ibomdatacommunity@gmail.com" style="color:var(--orange);">ibomdatacommunity@gmail.com</a>
@@ -317,11 +248,10 @@
         <div class="contact-social" style="margin-top:28px;">
           <p>Follow us:</p>
           <div class="social-row">
-            <a href="#" class="social-pill">📘 Facebook</a>
-            <a href="#" class="social-pill">💼 LinkedIn</a>
-            <a href="#" class="social-pill">🐦 Twitter / X</a>
+            <a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener" class="social-pill">Facebook</a>
+            <a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
+            <a href="https://x.com/ibomdata" target="_blank" rel="noopener" class="social-pill">Twitter / X</a>
           </div>
-          <p style="margin-top:10px;font-size:.82rem;color:rgba(255,255,255,.45);">@ibomndata</p>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;">
@@ -329,11 +259,6 @@
           <h3 style="color:white;margin-bottom:16px;">Miss Data Connect 1.0?</h3>
           <p style="margin-bottom:24px;">Don't miss the next one! Join our community to be the first to know about upcoming events, workshops, and hackathons.</p>
           <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-primary" style="width:100%;text-align:center;display:block;padding:14px;">Join the Community</a>
-        </div>
-        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px;">
-          <h3 style="color:white;margin-bottom:12px;">🏆 Next Up: Hackathon 2025</h3>
-          <p style="margin-bottom:20px;font-size:.9rem;">Register for Ibom Data Connect 2.0 Hackathon and compete for ₦50,000 in prizes.</p>
-          <a href="hackathon-2025.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);width:100%;text-align:center;display:block;padding:12px;">Register Now →</a>
         </div>
       </div>
     </div>
