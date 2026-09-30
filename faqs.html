@@ -101,9 +101,6 @@
       align-items: center;
       gap: 10px;
     }
-    .faq-section-title .icon {
-      font-size: 1.4rem;
-    }
 
     /* ── Accordion items ── */
     .faq-item {
@@ -128,26 +125,12 @@
       color: var(--dark-hero);
       cursor: pointer;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       gap: 16px;
       line-height: 1.4;
     }
     .faq-q:hover { color: var(--green); }
-    .faq-chevron {
-      flex-shrink: 0;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: rgba(30,136,0,.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--green);
-      font-size: .75rem;
-      transition: transform .25s;
-    }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); }
     .faq-a {
       max-height: 0;
       overflow: hidden;
@@ -228,12 +211,12 @@
 <div class="mobile-nav" id="mobileNav">
   <div class="nav-panel-header">
     <img class="nav-panel-logo" src="images/logo-new.png" alt="Ibom Data Community"/>
-    <button class="nav-panel-close" onclick="toggleMobileNav()" aria-label="Close menu">✕</button>
+    <button class="nav-panel-close" onclick="toggleMobileNav()" aria-label="Close menu">Close</button>
   </div>
   <nav class="nav-panel-links">
     <a href="index.html">Home</a>
     <div class="nav-panel-accordion">
-      <button type="button" class="nav-panel-accordion-trigger">Events <span class="chev">⌄</span></button>
+      <button type="button" class="nav-panel-accordion-trigger">Events</button>
       <div class="nav-panel-accordion-body">
         <a href="data-connect-2024.html">Ibom Data Connect 1.0</a>
         <a href="tech-mixer-2025.html">Tech Mixer 2025</a>
@@ -276,135 +259,135 @@
 
   <!-- GENERAL -->
   <div class="faq-section" id="general">
-    <h2 class="faq-section-title"><span class="icon">🌍</span> General</h2>
+    <h2 class="faq-section-title">General</h2>
 
     <div class="faq-item">
-      <button class="faq-q">What is the Ibom Data Community (IDC)?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">What is the Ibom Data Community (IDC)?</button>
       <div class="faq-a"><p>The Ibom Data Community (IDC) is a grassroots data and tech community based in Uyo, Akwa Ibom State, Nigeria. We bring together data enthusiasts, analysts, engineers, and beginners who are passionate about learning, collaboration, and using data skills to solve real-world problems. Our community is open to anyone interested in the data space, regardless of experience level.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Who is IDC for?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Who is IDC for?</button>
       <div class="faq-a"><p>IDC is for everyone! Whether you're a complete beginner just discovering data, an intermediate practitioner building your skills, or an experienced data professional looking to give back and connect, there is a place for you at IDC. Our members include students, working professionals, freelancers, and career switchers.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Where is IDC based?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Where is IDC based?</button>
       <div class="faq-a"><p>IDC is headquartered in Uyo, Akwa Ibom State, Nigeria. Many of our in-person events take place at RootHub, Start Innovation Hub, and other partner venues in Uyo. We also run online sessions accessible to members across Nigeria and beyond.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">How can I contact the IDC team?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">How can I contact the IDC team?</button>
       <div class="faq-a"><p>You can reach us any time by email at <a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a>. You can also connect with us on Facebook, LinkedIn, and Twitter/X. Search for "Ibom Data Community". We aim to respond to all messages within 48 hours.</p></div>
     </div>
   </div>
 
   <!-- MEMBERSHIP -->
   <div class="faq-section" id="membership">
-    <h2 class="faq-section-title"><span class="icon">👥</span> Membership</h2>
+    <h2 class="faq-section-title">Membership</h2>
 
     <div class="faq-item">
-      <button class="faq-q">How do I join the Ibom Data Community?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">How do I join the Ibom Data Community?</button>
       <div class="faq-a"><p>Joining IDC is simple and completely free. Reach out to us via email at <a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a> or connect with us on social media to be added to our WhatsApp community group, where we share updates, resources, and opportunities. You can also show up at any of our public events. Everyone is welcome.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Is there a membership fee?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Is there a membership fee?</button>
       <div class="faq-a"><p>No, IDC membership is completely free. We believe that access to a supportive data community should never be a financial barrier. Some specific workshops or events may have a small logistics fee, but we always communicate this clearly in advance.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Do I need a technical background to join?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Do I need a technical background to join?</button>
       <div class="faq-a"><p>Not at all. You don't need any prior technical experience to become a member. Many of our current members started with zero data skills and have grown significantly through the community. IDC exists precisely to help beginners find their footing and grow alongside others on the same journey.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Can I contribute to IDC as a volunteer or mentor?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Can I contribute to IDC as a volunteer or mentor?</button>
       <div class="faq-a"><p>Absolutely, and we'd love that! We are always looking for volunteers to help with events, content creation, and community support. If you have data skills and want to mentor others, please reach out to us at <a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a> with a brief description of your background and how you'd like to contribute. Visit our <a href="team.html">Team page</a> to learn more about joining the IDC family.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">What is "Community Member of the Week"?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">What is "Community Member of the Week"?</button>
       <div class="faq-a"><p>Community Member of the Week is our way of celebrating standout members who are actively learning, helping others, or making meaningful contributions to the community. Nominees are recognised within our community channels, and it's one of the many ways we keep the community spirit alive and encourage members to stay engaged.</p></div>
     </div>
   </div>
 
   <!-- EVENTS -->
   <div class="faq-section" id="events">
-    <h2 class="faq-section-title"><span class="icon">🎉</span> Events</h2>
+    <h2 class="faq-section-title">Events</h2>
 
     <div class="faq-item">
-      <button class="faq-q">What kind of events does IDC organise?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">What kind of events does IDC organise?</button>
       <div class="faq-a"><p>IDC runs a variety of events throughout the year, including data conferences (like Ibom Data Connect), hackathons where participants solve real data problems, networking socials (like Tech Mixer), interactive Friday Games sessions, workshops, and online learning sessions. We try to mix learning with fun so there's something for everyone.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">What are the Friday Games?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">What are the Friday Games?</button>
       <div class="faq-a"><p>Friday Games is a fun, informal community activity where members engage in data-themed challenges, quizzes, and brain teasers. It's a great way to sharpen your analytical thinking, meet other members, and end the week on a high note. Participation is open to all IDC members and is completely free.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Are IDC events only in-person or also online?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Are IDC events only in-person or also online?</button>
       <div class="faq-a"><p>We run both! Larger flagship events like Ibom Data Connect and the Hackathon tend to be in-person in Uyo, while many workshops, mentorship sessions, and Friday Games can be attended online. We always specify the format when we announce an event, so keep an eye on our community channels.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Is the 2025 Hackathon still open for registration?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Is the 2025 Hackathon still open for registration?</button>
       <div class="faq-a"><p>The 2025 IDC Hackathon has already taken place, and it was a great success! Registration is now closed. You can read about the event, winners, and outcomes on the <a href="hackathon-2025.html">Hackathon 2025 page</a>. Keep an eye out for announcements about our next hackathon. It's something we're already planning!</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">How do I find out about upcoming events?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">How do I find out about upcoming events?</button>
       <div class="faq-a"><p>The best way is to join our WhatsApp community group where we post all announcements first. You can also follow us on social media and check the Events section of this website regularly. Reach out at <a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a> to be added to our mailing list.</p></div>
     </div>
   </div>
 
   <!-- PROGRAMMES -->
   <div class="faq-section" id="programmes">
-    <h2 class="faq-section-title"><span class="icon">🎓</span> Programmes</h2>
+    <h2 class="faq-section-title">Programmes</h2>
 
     <div class="faq-item">
-      <button class="faq-q">What is the RootHub Google Scholarship?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">What is the RootHub Google Scholarship?</button>
       <div class="faq-a"><p>The RootHub Google Scholarship is a partnership between IDC and RootHub through which four IDC community members received full Google Career Certificates scholarships. These scholarships cover programmes like the Google Data Analytics Certificate on Coursera, an industry-recognised credential that helps learners build job-ready data skills at no personal cost. This is one of our proudest achievements as a community.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Will there be more scholarship opportunities in the future?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Will there be more scholarship opportunities in the future?</button>
       <div class="faq-a"><p>We are actively working to unlock more scholarship and sponsorship opportunities for our members. Opportunities are announced through our community channels as soon as they become available. Being an active, engaged member increases your visibility and likelihood of being nominated for such opportunities.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Tell me about the IDC Mentorship Programme.<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Tell me about the IDC Mentorship Programme.</button>
       <div class="faq-a"><p>IDC ran a 6-week free mentorship programme for four selected community members. Participants received one-on-one and group sessions with experienced data practitioners covering topics like data analysis, SQL, visualisation, and career development. The programme is designed to fast-track members who show drive and commitment. We plan to run more cohorts, so watch this space.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">How are mentorship participants selected?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">How are mentorship participants selected?</button>
       <div class="faq-a"><p>Selection is based on community engagement, demonstrated learning commitment, and a short application process when a cohort is announced. There is no prior experience requirement. What matters most is your dedication and hunger to grow. Past participants have ranged from total beginners to those looking to level up from intermediate to advanced.</p></div>
     </div>
   </div>
 
   <!-- RESOURCES -->
   <div class="faq-section" id="resources-tab">
-    <h2 class="faq-section-title"><span class="icon">📚</span> Resources & Learning</h2>
+    <h2 class="faq-section-title">Resources & Learning</h2>
 
     <div class="faq-item">
-      <button class="faq-q">What tools should a beginner data analyst learn first?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">What tools should a beginner data analyst learn first?</button>
       <div class="faq-a"><p>We recommend starting with Microsoft Excel or Google Sheets to understand data manipulation fundamentals. From there, move into SQL to query databases, and then pick up a visualisation tool like Power BI or Tableau. Once you're comfortable, Python (especially Pandas) becomes a powerful next step. Our <a href="resources.html">Resources page</a> has curated free learning materials for each of these tools.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Does IDC offer its own courses or learning content?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Does IDC offer its own courses or learning content?</button>
       <div class="faq-a"><p>While IDC doesn't yet publish its own formal courses, we run regular workshops and learning sessions for members. We also curate lists of the best free and paid resources across tools and platforms. See our <a href="resources.html">Resources page</a>. Members in our community also regularly share tutorials, datasets, and project ideas within our channels.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">Are the learning resources on your site free?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">Are the learning resources on your site free?</button>
       <div class="faq-a"><p>Yes, everything we curate on our Resources page prioritises free, high-quality materials. Some external platforms we link to (like Coursera) have both free audit options and paid certificates. We always indicate whether something is free or paid. Our goal is to make data education accessible regardless of your budget.</p></div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">How can I practise my data skills?<span class="faq-chevron">▼</span></button>
+      <button class="faq-q">How can I practise my data skills?</button>
       <div class="faq-a"><p>The best way to learn data is by doing. We recommend working on real datasets from platforms like Kaggle, Data.gov, or the World Bank Open Data portal. Participate in IDC hackathons and Friday Games challenges. Reproduce analyses from articles or blogs you find interesting. Share your work, even a simple Excel analysis, with the community for feedback. Consistency beats perfection every time.</p></div>
     </div>
   </div>
@@ -417,7 +400,7 @@
     <h2>Still Have Questions?</h2>
     <p>We're always happy to help. Drop us a message and a team member will get back to you.</p>
     <div class="btn-row">
-      <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-primary" style="font-size:1rem;padding:14px 32px;">📧 Email Us</a>
+      <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-primary" style="font-size:1rem;padding:14px 32px;">Email Us</a>
       <a href="team.html" class="btn btn-outline" style="color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.3);font-size:1rem;padding:14px 28px;">Meet the Team</a>
     </div>
   </div>

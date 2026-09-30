@@ -179,22 +179,6 @@
       align-items: center;
       gap: 14px;
     }
-    .res-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .res-icon.green { background: rgba(30,136,0,.1); }
-    .res-icon.blue { background: rgba(26,106,170,.1); }
-    .res-icon.orange { background: rgba(247,146,30,.1); }
-    .res-icon.red { background: rgba(204,34,0,.08); }
-    .res-icon.purple { background: rgba(120,60,200,.1); }
-    .res-icon.teal { background: rgba(0,150,136,.1); }
     .res-card-title {
       font-family: 'Poppins', sans-serif;
       font-size: 1.05rem;
@@ -265,7 +249,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .idc-tip-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
     .idc-tip h4 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.05rem;
@@ -300,7 +283,6 @@
       transition: box-shadow .2s, transform .2s;
     }
     .dataset-pill:hover { box-shadow: 0 6px 20px rgba(0,0,0,.09); transform: translateY(-2px); }
-    .dataset-pill span:first-child { font-size: 1.4rem; }
     .dataset-pill-text strong {
       display: block;
       font-size: .92rem;
@@ -368,12 +350,12 @@
 <div class="mobile-nav" id="mobileNav">
   <div class="nav-panel-header">
     <img class="nav-panel-logo" src="images/logo-new.png" alt="Ibom Data Community"/>
-    <button class="nav-panel-close" onclick="toggleMobileNav()" aria-label="Close menu">✕</button>
+    <button class="nav-panel-close" onclick="toggleMobileNav()" aria-label="Close menu">Close</button>
   </div>
   <nav class="nav-panel-links">
     <a href="index.html">Home</a>
     <div class="nav-panel-accordion">
-      <button type="button" class="nav-panel-accordion-trigger">Events <span class="chev">⌄</span></button>
+      <button type="button" class="nav-panel-accordion-trigger">Events</button>
       <div class="nav-panel-accordion-body">
         <a href="data-connect-2024.html">Ibom Data Connect 1.0</a>
         <a href="tech-mixer-2025.html">Tech Mixer 2025</a>
@@ -394,7 +376,7 @@
 <!-- ── HERO ── -->
 <section class="res-hero">
   <div class="container">
-    <span class="badge">📚 Knowledge Resources</span>
+    <span class="badge">Knowledge Resources</span>
     <h1>Learn Data Skills, For Free</h1>
     <p>Curated tools, courses, and platforms to take you from beginner to job-ready. Handpicked by the IDC team.</p>
     <div class="res-hero-pills">
@@ -414,9 +396,9 @@
   <div class="res-filter-inner">
     <span class="res-filter-label">Show:</span>
     <button class="filter-btn active" data-filter="all">All Levels</button>
-    <button class="filter-btn beginner" data-filter="beginner">🟢 Beginner</button>
-    <button class="filter-btn intermediate" data-filter="intermediate">🔵 Intermediate</button>
-    <button class="filter-btn advanced" data-filter="advanced">🔴 Advanced</button>
+    <button class="filter-btn beginner" data-filter="beginner">Beginner</button>
+    <button class="filter-btn intermediate" data-filter="intermediate">Intermediate</button>
+    <button class="filter-btn advanced" data-filter="advanced">Advanced</button>
   </div>
 </div>
 
@@ -425,7 +407,6 @@
 
   <!-- IDC TIP -->
   <div class="idc-tip" style="padding-left:48px;padding-right:48px;margin-top:0;margin-bottom:0;border-radius:0;max-width:100%;">
-    <span class="idc-tip-icon">💡</span>
     <div>
       <h4>IDC Tip: Start With One Tool</h4>
       <p>Don't try to learn everything at once. Pick one tool, commit to 30 minutes a day for 30 days, and build a small project. Then move to the next. Join our <a href="https://forms.gle/GvVMkUcGDKdPKGCW6">community group</a> to share your progress and get support from fellow learners.</p>
@@ -435,7 +416,7 @@
   <!-- BEGINNER -->
   <div class="res-section" id="beginner" data-level="beginner" style="margin-top:72px;">
     <div class="res-section-head">
-      <h2>🟢 Beginner Resources</h2>
+      <h2>Beginner Resources</h2>
       <span class="level-pill beginner">Beginner</span>
     </div>
     <p class="res-section-desc">Never worked with data before? Start here. These tools and courses are designed to be accessible to complete beginners. No coding experience is required for most of them.</p>
@@ -444,7 +425,6 @@
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon green">📊</div>
           <div>
             <div class="res-card-title">Microsoft Excel</div>
             <div class="res-card-platform">Microsoft 365 / Desktop</div>
@@ -453,13 +433,12 @@
         <p class="res-card-desc">The cornerstone of data analysis. Learn formulas, pivot tables, charts, and VLOOKUP. Excel is the most widely used tool in business data work and an essential first step.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free to Learn</span>
-          <a href="https://support.microsoft.com/en-us/excel" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://support.microsoft.com/en-us/excel" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon green">🟩</div>
           <div>
             <div class="res-card-title">Google Sheets</div>
             <div class="res-card-platform">Google Workspace</div>
@@ -468,13 +447,12 @@
         <p class="res-card-desc">A free, browser-based alternative to Excel. Great for collaboration and sharing. Learn the same core spreadsheet skills, formulas, charts, and data cleaning, with nothing to install.</p>
         <div class="res-card-footer">
           <span class="res-tag free">100% Free</span>
-          <a href="https://workspace.google.com/intl/en/products/sheets/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://workspace.google.com/intl/en/products/sheets/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon blue">🎓</div>
           <div>
             <div class="res-card-title">Google Data Analytics Certificate</div>
             <div class="res-card-platform">Coursera</div>
@@ -483,13 +461,12 @@
         <p class="res-card-desc">A structured 6-month programme covering spreadsheets, SQL, Tableau, and R. Designed for complete beginners, it's one of the most recognised entry-level data credentials available. IDC members have received this scholarship.</p>
         <div class="res-card-footer">
           <span class="res-tag freemium">Audit Free / Paid Cert</span>
-          <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon orange">🗄️</div>
           <div>
             <div class="res-card-title">SQL for Beginners</div>
             <div class="res-card-platform">Mode / W3Schools / SQLZoo</div>
@@ -498,13 +475,12 @@
         <p class="res-card-desc">SQL is the language of databases and one of the most in-demand data skills globally. Start with SELECT, WHERE, GROUP BY, and JOINs. SQLZoo and W3Schools both offer free interactive exercises with instant feedback.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://sqlzoo.net/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://sqlzoo.net/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon purple">📈</div>
           <div>
             <div class="res-card-title">Power BI Desktop</div>
             <div class="res-card-platform">Microsoft Power BI</div>
@@ -513,13 +489,12 @@
         <p class="res-card-desc">A free, powerful business intelligence tool from Microsoft. Connect to data sources, build interactive dashboards, and create reports that tell stories. Widely used across Nigerian companies and globally in demand.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free Desktop App</span>
-          <a href="https://powerbi.microsoft.com/en-us/desktop/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://powerbi.microsoft.com/en-us/desktop/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon teal">🎯</div>
           <div>
             <div class="res-card-title">Khan Academy: Statistics</div>
             <div class="res-card-platform">Khan Academy</div>
@@ -528,7 +503,7 @@
         <p class="res-card-desc">Understanding data starts with understanding statistics. Khan Academy's free Statistics and Probability course is clear, beginner-friendly, and interactive. Learn mean, median, distributions, and probability from scratch.</p>
         <div class="res-card-footer">
           <span class="res-tag free">100% Free</span>
-          <a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
@@ -540,7 +515,7 @@
   <!-- INTERMEDIATE -->
   <div class="res-section" id="intermediate" data-level="intermediate">
     <div class="res-section-head">
-      <h2>🔵 Intermediate Resources</h2>
+      <h2>Intermediate Resources</h2>
       <span class="level-pill intermediate">Intermediate</span>
     </div>
     <p class="res-section-desc">Ready to go deeper? These resources build on spreadsheet and SQL foundations, introducing programming, advanced visualisation, and data storytelling.</p>
@@ -549,7 +524,6 @@
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon blue">🐍</div>
           <div>
             <div class="res-card-title">Python for Data Analysis</div>
             <div class="res-card-platform">Kaggle Learn / freeCodeCamp</div>
@@ -558,13 +532,12 @@
         <p class="res-card-desc">Python's Pandas and NumPy libraries make data wrangling at scale possible. Kaggle Learn offers a free, self-paced Python for Data Science course that's practical and project-based. It's great once you're comfortable with SQL basics.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://www.kaggle.com/learn/python" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.kaggle.com/learn/python" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon teal">📐</div>
           <div>
             <div class="res-card-title">R for Data Science</div>
             <div class="res-card-platform">r4ds.had.co.nz</div>
@@ -573,13 +546,12 @@
         <p class="res-card-desc">The free online book "R for Data Science" by Hadley Wickham is the definitive guide to using R with the tidyverse. Excellent for statistical analysis, academic research, and producing beautiful visualisations with ggplot2.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://r4ds.had.co.nz/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://r4ds.had.co.nz/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon orange">🔷</div>
           <div>
             <div class="res-card-title">Tableau Public</div>
             <div class="res-card-platform">Tableau</div>
@@ -588,13 +560,12 @@
         <p class="res-card-desc">Tableau is one of the most powerful data visualisation tools available. Tableau Public is free and lets you build and publish stunning interactive dashboards. An excellent portfolio-builder and widely recognised by employers.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://public.tableau.com/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://public.tableau.com/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon blue">🗃️</div>
           <div>
             <div class="res-card-title">Advanced SQL</div>
             <div class="res-card-platform">Mode Analytics / StrataScratch</div>
@@ -603,13 +574,12 @@
         <p class="res-card-desc">Go beyond basic queries with window functions, CTEs, subqueries, and performance optimisation. StrataScratch has real interview-style SQL questions from top companies, excellent for job preparation and sharpening analytical SQL skills.</p>
         <div class="res-card-footer">
           <span class="res-tag freemium">Free / Freemium</span>
-          <a href="https://www.stratascratch.com/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.stratascratch.com/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon purple">📖</div>
           <div>
             <div class="res-card-title">Storytelling with Data</div>
             <div class="res-card-platform">Book + Blog (Cole Nussbaumer Knaflic)</div>
@@ -618,13 +588,12 @@
         <p class="res-card-desc">Data analysis is only as valuable as the story it tells. This blog (free) and book teach you how to choose the right chart, eliminate clutter, and design dashboards that drive decisions. One of the most recommended resources in the data community.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Blog Free / Book Paid</span>
-          <a href="https://www.storytellingwithdata.com/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.storytellingwithdata.com/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon green">🤖</div>
           <div>
             <div class="res-card-title">Kaggle Competitions &amp; Notebooks</div>
             <div class="res-card-platform">Kaggle</div>
@@ -633,7 +602,7 @@
         <p class="res-card-desc">Kaggle is the world's largest data science community. Browse thousands of public datasets, study winning notebooks, and enter competitions to build real-world problem-solving experience. A must-have for any growing data analyst.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://www.kaggle.com/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.kaggle.com/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
@@ -645,7 +614,7 @@
   <!-- ADVANCED -->
   <div class="res-section" id="advanced" data-level="advanced">
     <div class="res-section-head">
-      <h2>🔴 Advanced Resources</h2>
+      <h2>Advanced Resources</h2>
       <span class="level-pill advanced">Advanced</span>
     </div>
     <p class="res-section-desc">For practitioners ready to move into machine learning, data engineering, and specialised analytics domains.</p>
@@ -654,7 +623,6 @@
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon red">🧠</div>
           <div>
             <div class="res-card-title">Machine Learning: Andrew Ng</div>
             <div class="res-card-platform">Coursera / DeepLearning.AI</div>
@@ -663,13 +631,12 @@
         <p class="res-card-desc">The gold standard for learning machine learning. Andrew Ng's courses are clear, rigorous, and taught by one of the field's pioneers. Covers supervised learning, neural networks, and best practices for real-world ML systems.</p>
         <div class="res-card-footer">
           <span class="res-tag freemium">Audit Free</span>
-          <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon orange">⚙️</div>
           <div>
             <div class="res-card-title">Data Engineering Zoomcamp</div>
             <div class="res-card-platform">DataTalks.Club</div>
@@ -678,13 +645,12 @@
         <p class="res-card-desc">A free 9-week cohort-based course covering the full data engineering stack: containerisation, data warehousing, workflow orchestration, batch and streaming processing. Industry-aligned and project-driven.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
       <div class="res-card">
         <div class="res-card-top">
-          <div class="res-icon purple">📊</div>
           <div>
             <div class="res-card-title">dbt (Data Build Tool)</div>
             <div class="res-card-platform">dbt Labs</div>
@@ -693,7 +659,7 @@
         <p class="res-card-desc">dbt is transforming how analytics engineering is done. Learn to build scalable data transformation pipelines in SQL, write tests, and document your data models. dbt Learn offers free courses directly from the creators.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
-          <a href="https://learn.getdbt.com/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
+          <a href="https://learn.getdbt.com/" target="_blank" rel="noopener" class="res-card-link">Explore</a>
         </div>
       </div>
 
@@ -705,32 +671,26 @@
   <!-- DATASETS -->
   <div class="res-section">
     <div class="res-section-head">
-      <h2>🗂️ Datasets to Practice With</h2>
+      <h2>Datasets to Practice With</h2>
     </div>
     <p class="res-section-desc">Real datasets to help you build projects, practise analysis, and put learning into action.</p>
     <div class="dataset-list">
       <a href="https://www.kaggle.com/datasets" target="_blank" rel="noopener" class="dataset-pill">
-        <span>🏆</span>
         <div class="dataset-pill-text"><strong>Kaggle Datasets</strong><small>Thousands of public datasets</small></div>
       </a>
       <a href="https://data.worldbank.org/" target="_blank" rel="noopener" class="dataset-pill">
-        <span>🌍</span>
         <div class="dataset-pill-text"><strong>World Bank Open Data</strong><small>Global development data</small></div>
       </a>
       <a href="https://data.gov.ng/" target="_blank" rel="noopener" class="dataset-pill">
-        <span>🇳🇬</span>
         <div class="dataset-pill-text"><strong>Nigeria Open Data Portal</strong><small>Nigerian government datasets</small></div>
       </a>
       <a href="https://ourworldindata.org/" target="_blank" rel="noopener" class="dataset-pill">
-        <span>📈</span>
         <div class="dataset-pill-text"><strong>Our World in Data</strong><small>Research-backed global data</small></div>
       </a>
       <a href="https://data.un.org/" target="_blank" rel="noopener" class="dataset-pill">
-        <span>🏛️</span>
         <div class="dataset-pill-text"><strong>UN Data</strong><small>United Nations statistics</small></div>
       </a>
       <a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank" rel="noopener" class="dataset-pill">
-        <span>⭐</span>
         <div class="dataset-pill-text"><strong>Awesome Public Datasets</strong><small>Curated GitHub list</small></div>
       </a>
     </div>
