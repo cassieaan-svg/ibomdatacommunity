@@ -3,28 +3,44 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ibom Data Connect 3.0 — Ibom Data Community</title>
+  <title>Ibom Data Connect 3.0 | Ibom Data Community</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Ibom Data Connect 3.0 — Beyond Automation: The Data Powering AI Agents. 31 October 2026. From Ibom Data Community."/>
-  <link rel="stylesheet" href="style.css?v=4"/>
+  <meta name="description" content="Ibom Data Connect 3.0: Beyond Automation, The Data Powering AI Agents. 31 October 2026. From Ibom Data Community."/>
+  <link rel="stylesheet" href="style.css?v=5"/>
   <style>
-    .idc3-hero{background:linear-gradient(135deg,#0D1F0A 0%,#1A3D0F 55%,#2D6618 100%);color:white;padding:100px 0;position:relative;overflow:hidden;text-align:center;}
+    .idc3-hero{background:linear-gradient(135deg,#0D1F0A 0%,#1A3D0F 55%,#2D6618 100%);color:white;padding:90px 0;position:relative;overflow:hidden;}
     .idc3-hero::before{content:'';position:absolute;top:-120px;right:-80px;width:550px;height:550px;border-radius:50%;background:var(--orange);opacity:.06;}
     .idc3-hero::after{content:'';position:absolute;bottom:-80px;left:-60px;width:380px;height:380px;border-radius:50%;background:var(--green);opacity:.08;}
-    .idc3-hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
-    .idc3-hero h1{font-size:clamp(2rem,4vw,3rem);color:white;margin-bottom:16px;line-height:1.2;}
+    .idc3-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;}
+    .idc3-hero h1{font-size:clamp(1.8rem,3.5vw,2.8rem);color:white;margin-bottom:16px;line-height:1.2;}
     .idc3-hero h1 .orange{color:var(--orange);}
-    .idc3-hero .sub{font-size:1.05rem;color:rgba(255,255,255,.72);margin-bottom:28px;line-height:1.75;}
-    .next-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(247,146,30,.15);border:1px solid rgba(247,146,30,.4);border-radius:20px;padding:8px 22px;font-size:.8rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.08em;margin-bottom:24px;}
-    .idc3-date{display:inline-block;font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:var(--orange);letter-spacing:.03em;margin-bottom:36px;}
-    .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;text-align:left;}
-    .topic-pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:16px 18px;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.85);}
-    .notify-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:40px;text-align:center;max-width:540px;margin:52px auto 0;}
+    .idc3-hero .sub{font-size:1.05rem;color:rgba(255,255,255,.72);margin-bottom:20px;line-height:1.75;}
+    .next-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(247,146,30,.15);border:1px solid rgba(247,146,30,.4);border-radius:20px;padding:8px 22px;font-size:.8rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;}
+    .idc3-hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+    .idc3-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:36px;}
+    .idc3-visual img{width:100%;border-radius:12px;margin-bottom:24px;display:block;}
+    .idc3-detail-list{display:flex;flex-direction:column;gap:14px;}
+    .idc3-detail-item{background:rgba(255,255,255,.08);border-radius:10px;padding:16px 20px;}
+    .idc3-detail-item .l{font-size:.72rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+    .idc3-detail-item .v{font-size:.98rem;font-weight:700;color:white;}
+    .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .topic-pill{background:var(--white);border:1px solid var(--border-light);box-shadow:var(--shadow);border-radius:var(--radius-sm);padding:16px 18px;font-size:.9rem;font-weight:600;color:var(--text-dark);text-align:center;}
+    .notify-box{background:linear-gradient(135deg,#0D1F0A 0%,#1A3D0F 55%,#2D6618 100%);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:40px;text-align:center;max-width:540px;margin:0 auto;}
     .notify-box h3{color:white;margin-bottom:12px;}
     .notify-box p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px;}
-    @media(max-width:640px){.topics-grid{grid-template-columns:1fr 1fr;}}
+    .sponsors-call-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+    .sponsors-call-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+    .sponsors-call-img img{width:100%;display:block;}
+    @media(max-width:900px){.idc3-hero-inner{grid-template-columns:1fr}.sponsors-call-inner{grid-template-columns:1fr;text-align:center;}.sponsors-call-img{order:-1;max-width:360px;margin:0 auto;}}
+    @media(max-width:640px){
+      .topics-grid{grid-template-columns:1fr 1fr;}
+      .idc3-hero{padding:40px 0;}
+      .next-badge{margin-bottom:10px;padding:6px 16px;font-size:.72rem;}
+      .idc3-hero h1{margin-bottom:12px;font-size:1.6rem;}
+      .idc3-hero .sub{margin-bottom:16px;font-size:.92rem;}
+    }
   </style>
 </head>
 <body>
@@ -82,48 +98,86 @@
 </div>
 
 <section class="idc3-hero">
-  <div class="container">
-    <div class="idc3-hero-inner">
+  <div class="container idc3-hero-inner">
+    <div>
       <div class="next-badge">Next Up</div>
       <div class="tag" style="background:rgba(247,146,30,.15);color:var(--orange);margin-bottom:16px;">Ibom Data Connect 3.0</div>
       <h1>Beyond Automation: <span class="orange">The Data Powering AI Agents</span></h1>
       <p class="sub">A one-day community event exploring the data behind AI agents, emerging technologies and the ideas shaping what comes next.</p>
-      <div class="idc3-date">31 October 2026</div>
-      <br/>
+      <div class="idc3-hero-actions">
+        <a href="https://meetumo.ai/e/ibom-data-connect-3-0" target="_blank" rel="noopener" class="btn btn-primary">Register for IDC 3.0 →</a>
+        <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.35);">Contact Us</a>
+      </div>
+    </div>
+    <div class="idc3-visual">
+      <img src="images/community/idc3-flyer.jpg" alt="Ibom Data Connect 3.0 event flyer"/>
+      <div class="idc3-detail-list">
+        <div class="idc3-detail-item"><div class="l">Date</div><div class="v">31st October, 2026</div></div>
+        <div class="idc3-detail-item"><div class="l">Time</div><div class="v">10:00 AM</div></div>
+        <div class="idc3-detail-item"><div class="l">Venue</div><div class="v">Cafe One, 162 Oron Road, Uyo</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">What's on the Table</div>
+      <h2>Topics We'll Explore</h2>
+    </div>
+    <div class="topics-grid">
+      <div class="topic-pill">Talks &amp; conversations</div>
+      <div class="topic-pill">Emerging technologies</div>
+      <div class="topic-pill">Data</div>
+      <div class="topic-pill">AI</div>
+      <div class="topic-pill">Health</div>
+      <div class="topic-pill">Legal &amp; data governance</div>
+      <div class="topic-pill">Networking</div>
+      <div class="topic-pill">Games</div>
+      <div class="topic-pill">Hackathon</div>
+    </div>
+  </div>
+</section>
+
+<!-- HACKATHON -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="notify-box" style="border-color:rgba(247,146,30,.3);">
+      <h3>IDC 3.0 Hackathon</h3>
+      <p>Coming soon. Details on the next hackathon track will be announced as we get closer to the event.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS CALL -->
+<section class="section section-white">
+  <div class="container sponsors-call-inner">
+    <div>
+      <div class="tag">Get Involved</div>
+      <h2>Call for Sponsors &amp; Partners</h2>
+      <p style="margin-bottom:24px;">Interested sponsors and partners should reach out by call or WhatsApp.</p>
+      <a href="https://wa.me/2349045948164" target="_blank" rel="noopener" class="btn btn-primary">Call or WhatsApp: 09045948164</a>
+    </div>
+    <div class="sponsors-call-img">
+      <img src="images/community/idc3-sponsors-flyer.jpg" alt="Call for Sponsors and Partners for Ibom Data Connect 3.0"/>
+    </div>
+  </div>
+</section>
+
+<!-- FULL PROGRAMME -->
+<section class="section section-white">
+  <div class="container">
+    <div class="notify-box">
+      <h3>Full Programme Dropping Soon</h3>
+      <p>Speakers and schedule details will be announced as we get closer to the date. Registration is already open, so grab your spot now.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="https://meetumo.ai/e/ibom-data-connect-3-0" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1rem;padding:14px 36px;">Register for IDC 3.0 →</a>
-        <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" target="_blank" class="btn btn-outline" style="font-size:1rem;padding:14px 36px;color:#fff;border-color:rgba(255,255,255,.35);">Join the Community</a>
-        <a href="contact.html" class="btn btn-outline" style="font-size:1rem;padding:14px 36px;color:#fff;border-color:rgba(255,255,255,.35);">Contact Us</a>
+        <a href="https://meetumo.ai/e/ibom-data-connect-3-0" target="_blank" rel="noopener" class="btn btn-primary">Register Now</a>
+        <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);">Email Us</a>
+        <a href="index.html" class="btn btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);">Back to Home</a>
       </div>
-
-      <div class="topics-grid">
-        <div class="topic-pill">Talks &amp; conversations</div>
-        <div class="topic-pill">Emerging technologies</div>
-        <div class="topic-pill">Data</div>
-        <div class="topic-pill">AI</div>
-        <div class="topic-pill">Health</div>
-        <div class="topic-pill">Legal &amp; data governance</div>
-        <div class="topic-pill">Networking</div>
-        <div class="topic-pill">Games</div>
-        <div class="topic-pill">Hackathon</div>
-      </div>
-
-      <div class="notify-box" style="border-color:rgba(247,146,30,.3);">
-        <h3>🏆 IDC 3.0 Hackathon — Register Now</h3>
-        <p>Teams will compete to turn real data challenges into working solutions. Registration is part of the main IDC 3.0 sign-up — just select the hackathon track.</p>
-        <a href="https://meetumo.ai/e/ibom-data-connect-3-0" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;text-align:center;display:block;padding:13px;">Register for the Hackathon →</a>
-      </div>
-
-      <div class="notify-box">
-        <h3>Full Programme Dropping Soon</h3>
-        <p>Speakers and schedule details will be announced as we get closer to the date — registration is already open, so grab your spot now.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a href="https://meetumo.ai/e/ibom-data-connect-3-0" target="_blank" rel="noopener" class="btn btn-primary">Register Now</a>
-          <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);">✉️ Email Us</a>
-          <a href="index.html" class="btn btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);">← Back to Home</a>
-        </div>
-        <p style="margin-top:20px;font-size:.8rem;color:rgba(255,255,255,.3);">ibomdatacommunity@gmail.com · @ibomdata</p>
-      </div>
+      <p style="margin-top:20px;font-size:.8rem;color:rgba(255,255,255,.3);">ibomdatacommunity@gmail.com · @ibomdata</p>
     </div>
   </div>
 </section>

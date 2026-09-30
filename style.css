@@ -2,7 +2,7 @@
    IBOM DATA COMMUNITY — Shared Stylesheet
    Brand: Orange #F7921E | Red #CC2200 | Green #1E8800
    =================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --orange:       #F7921E;
@@ -32,7 +32,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--text-dark);
   background: var(--white);
   line-height: 1.7;
@@ -46,7 +46,7 @@ ul { list-style: none; }
 
 .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
 
-h1,h2,h3,h4,h5 { font-weight: 800; line-height: 1.2; font-family: 'Nunito', sans-serif; }
+h1,h2,h3,h4,h5 { font-weight: 800; line-height: 1.2; font-family: 'Poppins', sans-serif; }
 h1 { font-size: clamp(2rem,4vw,3rem); }
 h2 { font-size: clamp(1.6rem,3vw,2.2rem); }
 h3 { font-size: clamp(1.1rem,2vw,1.35rem); }
@@ -54,7 +54,7 @@ h4 { font-size: 1.05rem; font-weight: 700; }
 p  { color: var(--text-mid); }
 
 /* ===== BUTTONS ===== */
-.btn { display:inline-block; padding:12px 28px; border-radius:var(--radius-sm); font-weight:700; font-size:.95rem; cursor:pointer; transition:all .2s ease; border:none; font-family:'Inter',sans-serif; }
+.btn { display:inline-block; padding:12px 28px; border-radius:var(--radius-sm); font-weight:700; font-size:.95rem; cursor:pointer; transition:all .2s ease; border:none; font-family: 'Poppins', sans-serif; }
 .btn-primary  { background:var(--orange); color:var(--white); }
 .btn-primary:hover { background:var(--orange-dark); transform:translateY(-1px); box-shadow:0 4px 16px rgba(247,146,30,.35); }
 .btn-green    { background:var(--green); color:var(--white); }
@@ -95,7 +95,7 @@ p  { color: var(--text-mid); }
 .nav-logo  { display:flex; align-items:center; gap:10px; margin-right:44px; flex-shrink:0; }
 .nav-logo img { height:52px; width:auto; }
 .nav-logo-text {
-  font-family:'Nunito',sans-serif; font-weight:900; font-size:.95rem;
+  font-family: 'Poppins', sans-serif; font-weight:900; font-size:.95rem;
   line-height:1.2; color:var(--text-dark); display:none;
 }
 .nav-links { display:flex; align-items:center; gap:36px; margin-right:auto; }
@@ -170,7 +170,7 @@ p  { color: var(--text-mid); }
 .nav-panel-accordion-trigger {
   width:100%; display:flex; align-items:center; justify-content:space-between;
   padding:16px 2px; background:none; border:none; cursor:pointer;
-  font-size:1.05rem; font-weight:700; color:var(--text-dark); font-family:'Inter',sans-serif;
+  font-size:1.05rem; font-weight:700; color:var(--text-dark); font-family: 'Poppins', sans-serif;
 }
 .nav-panel-accordion-trigger .chev { transition:transform .25s ease; color:var(--text-light); font-size:.85rem; }
 .nav-panel-accordion.open .chev { transform:rotate(180deg); }
@@ -217,7 +217,7 @@ p  { color: var(--text-mid); }
 
 /* ===== STATS ===== */
 .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; text-align:center; }
-.stat-block .stat-number { font-size:clamp(2rem,4vw,3rem); font-weight:900; color:var(--orange); line-height:1; font-family:'Nunito',sans-serif; }
+.stat-block .stat-number { font-size:clamp(2rem,4vw,3rem); font-weight:900; color:var(--orange); line-height:1; font-family: 'Poppins', sans-serif; }
 .stat-block .stat-label  { font-size:.85rem; color:var(--text-light); margin-top:6px; }
 
 /* ===== ACHIEVEMENTS (dark section) ===== */
@@ -231,7 +231,7 @@ p  { color: var(--text-mid); }
 }
 .achievement-card:hover { background:rgba(255,255,255,.09); transform:translateY(-3px); }
 .achievement-icon { font-size:2.8rem; margin-bottom:16px; display:block; }
-.achievement-number { font-size:2.8rem; font-weight:900; font-family:'Nunito',sans-serif; display:block; line-height:1; margin-bottom:8px; }
+.achievement-number { font-size:2.8rem; font-weight:900; font-family: 'Poppins', sans-serif; display:block; line-height:1; margin-bottom:8px; }
 .achievement-title { font-size:1rem; font-weight:700; color:white; margin-bottom:6px; }
 .achievement-desc  { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.6; }
 .achievement-badge { display:inline-block; padding:4px 12px; border-radius:20px; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; margin-bottom:14px; }
@@ -256,7 +256,7 @@ p  { color: var(--text-mid); }
 .prize-card    { text-align:center; background:var(--white); border-radius:var(--radius); padding:36px 32px; box-shadow:var(--shadow); min-width:180px; }
 .prize-card.grand { border:3px solid var(--orange); transform:scale(1.06); }
 .prize-emoji   { font-size:2.5rem; margin-bottom:12px; }
-.prize-amount  { font-size:2.2rem; font-weight:900; color:var(--orange); font-family:'Nunito',sans-serif; }
+.prize-amount  { font-size:2.2rem; font-weight:900; color:var(--orange); font-family: 'Poppins', sans-serif; }
 .prize-label   { font-size:.85rem; color:var(--text-light); margin-top:4px; }
 
 /* ===== STORIES ===== */
@@ -264,7 +264,7 @@ p  { color: var(--text-mid); }
 .story-quote { font-size:3rem; color:var(--amber-mid); font-family:Georgia,serif; line-height:1; margin-bottom:8px; }
 .story-text  { font-size:.88rem; color:var(--text-light); line-height:1.7; margin-bottom:20px; font-style:italic; }
 .story-author { display:flex; align-items:center; gap:12px; }
-.story-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--orange),var(--red)); display:flex; align-items:center; justify-content:center; font-weight:800; color:white; font-size:1rem; font-family:'Nunito',sans-serif; }
+.story-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--orange),var(--red)); display:flex; align-items:center; justify-content:center; font-weight:800; color:white; font-size:1rem; font-family: 'Poppins', sans-serif; }
 .story-avatar-green { background:linear-gradient(135deg,var(--green),#4DC93A); }
 .story-author-info strong { display:block; font-size:.9rem; }
 .story-author-info span  { font-size:.8rem; color:var(--text-light); }
@@ -309,13 +309,13 @@ p  { color: var(--text-mid); }
 /* ===== UPCOMING EVENTS ===== */
 .upcoming-event-card { display:flex; gap:20px; align-items:flex-start; padding:28px; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); border:1px solid var(--border-light); transition:all .25s; }
 .upcoming-event-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-2px); }
-.event-num { width:48px; height:48px; border-radius:10px; background:var(--orange); color:white; font-weight:900; font-size:1.1rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'Nunito',sans-serif; }
+.event-num { width:48px; height:48px; border-radius:10px; background:var(--orange); color:white; font-weight:900; font-size:1.1rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family: 'Poppins', sans-serif; }
 .event-card-subtitle { font-size:.8rem; color:var(--orange); font-weight:700; margin-bottom:4px; text-transform:uppercase; letter-spacing:.04em; }
 
 /* ===== HERO STRIP ===== */
 .events-strip { background:var(--white); border-top:1px solid var(--border-light); border-bottom:1px solid var(--border-light); padding:20px 0; }
 .events-strip-inner { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-.events-strip-label { font-weight:800; font-size:.88rem; color:var(--text-dark); white-space:nowrap; font-family:'Nunito',sans-serif; }
+.events-strip-label { font-weight:800; font-size:.88rem; color:var(--text-dark); white-space:nowrap; font-family: 'Poppins', sans-serif; }
 .event-pill { display:inline-block; padding:7px 18px; border-radius:6px; font-size:.83rem; font-weight:700; background:var(--cream); border:1px solid var(--border); color:var(--text-mid); transition:all .2s; }
 .event-pill:hover { background:var(--orange); color:white; border-color:var(--orange); }
 .event-pill.green:hover { background:var(--green); border-color:var(--green); }
@@ -346,7 +346,7 @@ p  { color: var(--text-mid); }
 }
 .spotlight-avatar img { width:100%; height:100%; object-fit:cover; }
 .spotlight-quote { font-size:1.05rem; font-style:italic; color:var(--text-mid); line-height:1.7; margin-bottom:18px; }
-.spotlight-name { font-weight:800; font-family:'Nunito',sans-serif; font-size:1.05rem; }
+.spotlight-name { font-weight:800; font-family: 'Poppins', sans-serif; font-size:1.05rem; }
 .spotlight-role { font-size:.82rem; color:var(--orange); font-weight:700; text-transform:uppercase; letter-spacing:.05em; margin-top:2px; }
 .spotlight-card.is-birthday { border-color:rgba(247,146,30,.4); box-shadow:0 4px 24px rgba(247,146,30,.12); }
 .spotlight-actions { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:20px; }
@@ -376,13 +376,24 @@ p  { color: var(--text-mid); }
   .contact-grid { grid-template-columns:1fr; }
 }
 @media (max-width:640px) {
+  :root { --nav-height: 64px; }
   .nav-links,.nav-cta { display:none; }
   .hamburger { display:flex; }
   .card-grid-3,.card-grid-2,.card-grid-4 { grid-template-columns:1fr; }
   .stats-grid { grid-template-columns:repeat(2,1fr); }
   .footer-bottom { flex-direction:column; gap:16px; text-align:center; }
-  .section { padding:56px 0; }
+  .section { padding:40px 0; }
+  .section-header { margin-bottom:32px; }
   .prizes-grid { flex-direction:column; align-items:center; }
   .prize-card.grand { transform:none; }
   .events-strip-inner { flex-direction:column; align-items:flex-start; }
+  .nav-logo img { height:40px; }
+
+  /* Tighten card padding for small screens */
+  .card,.theme-card,.detail-card,.winner-card,.experience-card,.why-card,
+  .testimonial-card,.story-card,.outcome-card,.rule-card,.info-card,
+  .sponsor-card,.faq-item { padding:20px; }
+  .faq-q { padding:16px 18px; }
+  .faq-item.open .faq-a { padding:0 18px 16px; }
+  .hackathon-recap,.winners-section .container,.notify-box { padding-left:4px; padding-right:4px; }
 }

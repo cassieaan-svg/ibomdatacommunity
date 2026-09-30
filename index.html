@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ibom Data Community — Data Is Better When We Do It Together</title>
+  <title>Ibom Data Community | Data Is Better When We Do It Together</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
   <meta name="description" content="A community for people learning data, building with data, and figuring out what's next. From beginners to experienced professionals, Ibom Data Community is where people connect, collaborate, and grow through data."/>
-  <meta property="og:title" content="Ibom Data Community — Data Is Better When We Do It Together"/>
+  <meta property="og:title" content="Ibom Data Community | Data Is Better When We Do It Together"/>
   <meta property="og:description" content="A community for people learning data, building with data, and figuring out what's next."/>
   <meta property="og:type" content="website"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css?v=4"/>
+  <link rel="stylesheet" href="style.css?v=5"/>
   <style>
     /* ── HERO ── */
     .hero {
@@ -51,7 +48,7 @@
     }
     .hero-stat { padding: 0 28px; }
     .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,.14); }
-    .hero-stat .n { font-size: 1.8rem; font-weight: 900; color: var(--orange); font-family: 'Nunito', sans-serif; display: block; }
+    .hero-stat .n { font-size: 1.8rem; font-weight: 900; color: var(--orange); font-family: 'Poppins', sans-serif; display: block; }
     .hero-stat .l { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 4px; letter-spacing: .01em; }
 
     /* ── ABOUT ── */
@@ -62,7 +59,7 @@
       width: 40px; height: 40px; border-radius: 50%;
       background: var(--orange); color: #fff;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: .85rem; flex-shrink: 0;
+      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: .85rem; flex-shrink: 0;
     }
     .pillar-icon-green { background: var(--green); }
     .pillar-body h4 { margin-bottom: 4px; font-size: .95rem; }
@@ -110,12 +107,12 @@
       text-align: left; z-index: 3;
     }
     .visual-caption-eyebrow {
-      display: block; font-family: 'Nunito', sans-serif; font-weight: 900;
+      display: block; font-family: 'Poppins', sans-serif; font-weight: 900;
       font-size: .72rem; letter-spacing: .07em; text-transform: uppercase;
       color: var(--orange); margin-bottom: 10px;
     }
     .visual-caption-line {
-      display: block; font-family: 'Nunito', sans-serif; font-weight: 800;
+      display: block; font-family: 'Poppins', sans-serif; font-weight: 800;
       font-size: 1rem; color: var(--text-dark); line-height: 1.5;
     }
 
@@ -231,7 +228,7 @@
     .event-next-inner h3 { color: #fff; font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin-bottom: 10px; }
     .event-next-theme { color: rgba(255,255,255,.82); font-size: 1.05rem; margin-bottom: 18px; }
     .event-next-date {
-      display: inline-block; font-family: 'Nunito', sans-serif; font-weight: 800;
+      display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 800;
       color: var(--orange); font-size: 1rem; letter-spacing: .04em; margin-bottom: 18px;
     }
     .event-next-desc { color: rgba(255,255,255,.68); font-size: .95rem; max-width: 480px; margin: 0 auto 28px; line-height: 1.7; }
@@ -261,7 +258,7 @@
     }
     .story-tab:last-child { border-right: none; }
     .story-tab-label {
-      display: block; font-family: 'Nunito', sans-serif; font-weight: 800;
+      display: block; font-family: 'Poppins', sans-serif; font-weight: 800;
       font-size: 1.05rem; color: var(--text-light); transition: color .3s ease;
     }
     .story-tab-sub {
@@ -303,7 +300,7 @@
     .story-secondary-item { flex: 1; min-width: 200px; text-align: center; padding: 0 28px; }
     .story-secondary-item + .story-secondary-item { border-left: 1px solid var(--border); }
     .story-secondary-item h5 {
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: .8rem;
+      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: .8rem;
       text-transform: uppercase; letter-spacing: .06em; color: var(--orange); margin-bottom: 6px;
     }
     .story-secondary-item p { font-size: .86rem; color: var(--text-light); margin: 0; }
@@ -383,6 +380,63 @@
       .hero-stat { padding: 0 10px 12px; flex: 0 0 42%; border-left: none !important; }
       .hero-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.14); }
     }
+
+    /* ── TESTIMONIALS ── */
+    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .testimonial-card {
+      background: var(--white); border-radius: var(--radius); padding: 32px;
+      box-shadow: var(--shadow); border: 1px solid var(--border-light);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .testimonial-quote { font-size: .98rem; font-style: italic; color: var(--text-mid); line-height: 1.75; }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .testimonial-avatar {
+      width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+      box-shadow: var(--shadow);
+    }
+    .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .testimonial-author-info strong { display: block; font-size: .92rem; }
+    .testimonial-author-info span { font-size: .8rem; color: var(--text-light); }
+    @media(max-width: 760px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+    /* ── FAQ PREVIEW ── */
+    .faq-item {
+      background: #fff; border-radius: 12px; margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06); overflow: hidden;
+      border: 1px solid rgba(0,0,0,.06); transition: box-shadow .2s;
+    }
+    .faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,.09); }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 20px 24px; font-family: 'Poppins', sans-serif; font-size: 1rem;
+      font-weight: 600; color: var(--dark-hero); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; line-height: 1.4;
+    }
+    .faq-q:hover { color: var(--green); }
+    .faq-chevron {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(30,136,0,.1); display: flex; align-items: center;
+      justify-content: center; color: var(--green); font-size: .75rem;
+      transition: transform .25s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .25s ease; padding: 0 24px;
+    }
+    .faq-item.open .faq-a { max-height: 400px; padding: 0 24px 20px; }
+    .faq-a p { font-size: .96rem; color: #444; line-height: 1.75; margin: 0; }
+    .faq-preview-list { max-width: 720px; margin: 0 auto; }
+  @media(max-width:640px){
+    .hero{padding:36px 0;}
+    .hero h1{font-size:1.7rem;margin-bottom:12px;}
+    .hero-subhead{margin-bottom:10px;font-size:.98rem;}
+    .hero p{margin-bottom:14px;font-size:.92rem;}
+    .hero-motto{margin-bottom:18px;font-size:.85rem;}
+    .hero-cta{margin-bottom:28px;}
+    .hero-stats{padding-top:20px;}
+  }
   </style>
 </head>
 <body>
@@ -646,6 +700,75 @@
   </div>
 </section>
 
+<!-- ── TESTIMONIALS ── -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">What Our Members Say</div>
+      <h2>Real Stories From the Community</h2>
+      <p>Hear from members whose data journey has grown alongside IDC.</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"Was invited to the event by a friend and to be honest, I'm glad I came. The Ibom Data Community has given me the opportunity to grow. I have built new relationships with fellow data analysts and I have gained a lot of knowledge from being part of this amazing community."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"><img src="images/community/testimonial-enomfon-ekpo.jpg" alt="Enomfon Ekpo"/></div>
+          <div class="testimonial-author-info">
+            <strong>Enomfon Ekpo</strong>
+            <span>Community Member</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"Being part of IDC has been a game-changer for me. It's made me realize that I still have a lot to learn, and that's motivated me to take my data analysis journey seriously and be more intentional about my growth. One of the most significant impacts of IDC on me is that it's helped me develop my critical thinking skills and attention to detail, and that's been a total mindset shift."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"><img src="images/community/testimonial-blessing-ekanem.jpg" alt="Blessing Ekanem"/></div>
+          <div class="testimonial-author-info">
+            <strong>Blessing Ekanem</strong>
+            <span>Community Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ PREVIEW ── -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Got Questions?</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>A few quick answers before you dive in.</p>
+    </div>
+    <div class="faq-preview-list">
+      <div class="faq-item">
+        <button class="faq-q">What is the Ibom Data Community (IDC)?<span class="faq-chevron">▼</span></button>
+        <div class="faq-a"><p>The Ibom Data Community (IDC) is a grassroots data and tech community based in Uyo, Akwa Ibom State, Nigeria. We bring together data enthusiasts, analysts, engineers, and beginners who are passionate about learning, collaboration, and using data skills to solve real-world problems.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who is IDC for?<span class="faq-chevron">▼</span></button>
+        <div class="faq-a"><p>IDC is for everyone! Whether you're a complete beginner just discovering data, an intermediate practitioner building your skills, or an experienced data professional looking to give back and connect, there is a place for you at IDC.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I join the Ibom Data Community?<span class="faq-chevron">▼</span></button>
+        <div class="faq-a"><p>Joining IDC is simple and completely free. Reach out to us via email at <a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a> or connect with us on social media to be added to our WhatsApp community group. You can also show up at any of our public events. Everyone is welcome.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a membership fee?<span class="faq-chevron">▼</span></button>
+        <div class="faq-a"><p>No, IDC membership is completely free. We believe that access to a supportive data community should never be a financial barrier. Some specific workshops or events may have a small logistics fee, but we always communicate this clearly in advance.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How can I contact the IDC team?<span class="faq-chevron">▼</span></button>
+        <div class="faq-a"><p>You can reach us any time by email at <a href="mailto:ibomdatacommunity@gmail.com">ibomdatacommunity@gmail.com</a>. You can also connect with us on Facebook, LinkedIn, and Twitter/X. Search for "Ibom Data Community".</p></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="faqs.html" class="btn btn-outline">See All FAQs →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ── FINAL CTA ── -->
 <section id="contact" class="final-cta">
   <div class="final-cta-inner container">
@@ -677,6 +800,16 @@
 
 
 <script src="js/main.js?v=4"></script>
-<script src="js/content.js?v=4"></script>
+<script src="js/content.js?v=5"></script>
+<script>
+  document.querySelectorAll('.faq-preview-list .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-preview-list .faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
 </body>
 </html>

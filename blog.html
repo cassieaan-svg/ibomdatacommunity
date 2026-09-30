@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog — Ibom Data Community</title>
+  <title>Blog | Ibom Data Community</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Stories, lessons and ideas from Ibom Data Community — event recaps, tutorials and reflections from our data community in Akwa Ibom."/>
-  <link rel="stylesheet" href="style.css?v=4"/>
+  <meta name="description" content="Stories, lessons and ideas from Ibom Data Community: event recaps, tutorials and reflections from our data community in Akwa Ibom."/>
+  <link rel="stylesheet" href="style.css?v=5"/>
   <style>
     .blog-hero{background:linear-gradient(135deg,#0D1F0A 0%,#1A3D0F 60%,#2D6618 100%);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
     .blog-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;border-radius:50%;background:var(--orange);opacity:.06;}
@@ -33,6 +33,14 @@
     .blog-post-cta{display:inline-flex;align-items:center;gap:6px;color:var(--orange);font-weight:700;font-size:.88rem;}
     .blog-post-cta-arrow{display:inline-block;transition:transform .2s ease;}
     .blog-post-item:hover .blog-post-cta-arrow{transform:translateX(4px);}
+    .blog-post-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .blog-post-share{
+      display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid var(--border);
+      border-radius:20px;padding:5px 14px;cursor:pointer;font-size:.78rem;font-weight:600;
+      color:var(--text-light);transition:all .2s ease;
+    }
+    .blog-post-share:hover{color:var(--orange);border-color:var(--orange);}
+    .blog-post-share.copied{color:var(--green);border-color:var(--green);}
 
     .blog-empty{text-align:center;padding:40px 0;color:var(--text-light);}
 
@@ -40,6 +48,7 @@
       .blog-post-item{grid-template-columns:1fr;gap:16px;}
       .blog-post-thumb{aspect-ratio:16/10;}
     }
+  @media(max-width:640px){.blog-hero{padding:44px 0;}}
   </style>
 </head>
 <body>
@@ -145,6 +154,6 @@
 </footer>
 
 <script src="js/main.js?v=4"></script>
-<script src="js/content.js?v=4"></script>
+<script src="js/content.js?v=5"></script>
 </body>
 </html>

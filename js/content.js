@@ -542,18 +542,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     var sorted = posts.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
     container.innerHTML = sorted.map(function (p) {
+      var href = 'blog-post.html?slug=' + encodeURIComponent(p.slug);
       return '' +
-        '<a href="blog-post.html?slug=' + encodeURIComponent(p.slug) + '" class="blog-post-item">' +
-          '<div class="blog-post-thumb"><img src="' + escapeHtml(p.coverImage) + '" alt="' + escapeHtml(p.title) + '" loading="lazy"/></div>' +
+        '<div class="blog-post-item">' +
+          '<a href="' + href + '" class="blog-post-thumb"><img src="' + escapeHtml(p.coverImage) + '" alt="' + escapeHtml(p.title) + '" loading="lazy"/></a>' +
           '<div class="blog-post-body">' +
             '<span class="blog-post-meta">' + escapeHtml(formatDate(p.date)) + ' · ' + escapeHtml(p.author) + '</span>' +
-            '<h2>' + escapeHtml(p.title) + '</h2>' +
+            '<a href="' + href + '" style="color:inherit;"><h2>' + escapeHtml(p.title) + '</h2></a>' +
             '<p>' + escapeHtml(p.excerpt) + '</p>' +
-            '<span class="blog-post-cta">Read Article <span class="blog-post-cta-arrow">→</span></span>' +
+            '<div class="blog-post-actions">' +
+              '<a href="' + href + '" class="blog-post-cta">Read Article <span class="blog-post-cta-arrow">→</span></a>' +
+              '<button type="button" class="blog-post-share" data-slug="' + escapeHtml(p.slug) + '">Copy Link</button>' +
+            '</div>' +
           '</div>' +
-        '</a>';
+        '</div>';
     }).join('');
     Array.prototype.forEach.call(container.children, function (el) { window.idcRevealNow && window.idcRevealNow(el); });
+
+    container.querySelectorAll('.blog-post-share').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var slug = btn.getAttribute('data-slug');
+        var url = window.location.origin + '/blog-post.html?slug=' + encodeURIComponent(slug);
+        var done = function () {
+          btn.textContent = 'Copied!';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(function () { prompt('Copy this link:', url); });
+        } else {
+          prompt('Copy this link:', url);
+        }
+      });
+    });
   }
 
   function renderBlogPost(posts) {
@@ -586,9 +607,15 @@ document.addEventListener('DOMContentLoaded', function () {
       coverWrap.style.display = 'block';
     }
 
+    function linkify(html) {
+      return html.replace(/(https?:\/\/[^\s<]+)/g, function (url) {
+        return '<a href="' + url + '" target="_blank" rel="noopener" style="color:var(--orange);font-weight:600;">' + url + '</a>';
+      });
+    }
+
     var paragraphs = (post.body || '').split(/\n\s*\n/).filter(Boolean);
     bodyEl.innerHTML = paragraphs.map(function (para) {
-      return '<p>' + escapeHtml(para).replace(/\n/g, '<br/>') + '</p>';
+      return '<p>' + linkify(escapeHtml(para).replace(/\n/g, '<br/>')) + '</p>';
     }).join('');
 
     var shareBtn = document.getElementById('postShare');

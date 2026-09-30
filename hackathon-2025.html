@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hackathon 2025 — Ibom Data Community</title>
+  <title>Hackathon 2025 | Ibom Data Community</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Ibom Data Connect 2.0 Hackathon 2025 — Driving Tourism & Hospitality Growth in Akwa Ibom. A recap of our completed hackathon event."/>
-  <link rel="stylesheet" href="style.css?v=4"/>
+  <meta name="description" content="Ibom Data Connect 2.0 Hackathon 2025: Driving Tourism & Hospitality Growth in Akwa Ibom. A recap of our completed hackathon event."/>
+  <link rel="stylesheet" href="style.css?v=5"/>
   <style>
-    .hack-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2D1A00 55%,#4A2800 100%);color:white;padding:90px 0;position:relative;overflow:hidden;}
+    .hack-hero{background:linear-gradient(135deg,#0D1F0A 0%,#1A3D0F 55%,#2D6618 100%);color:white;padding:90px 0;position:relative;overflow:hidden;}
     .hack-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:var(--orange);opacity:.07;}
     .hack-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;}
     .hack-hero h1{font-size:clamp(1.8rem,3.2vw,2.8rem);color:white;margin-bottom:16px;line-height:1.2;}
@@ -21,7 +21,7 @@
     .hack-visual h3{color:white;margin-bottom:16px;font-size:1rem;}
     .prize-row{display:flex;gap:14px;}
     .prize-mini{flex:1;text-align:center;background:rgba(255,255,255,.08);border-radius:10px;padding:18px 10px;}
-    .prize-mini .amt{font-size:1.5rem;font-weight:900;color:var(--orange);display:block;font-family:'Nunito',sans-serif;}
+    .prize-mini .amt{font-size:1.5rem;font-weight:900;color:var(--orange);display:block;font-family: 'Poppins', sans-serif;}
     .prize-mini.gold .amt{color:#F5A623;}
     .prize-mini .lbl{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:4px;}
     .outcome-badge{display:inline-block;background:rgba(30,136,0,.2);color:#4DC93A;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:12px;margin-bottom:10px;}
@@ -33,11 +33,41 @@
     .detail-card h4{color:var(--orange);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;}
     .rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
     .rule-card{background:var(--white);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid var(--border-light);display:flex;gap:18px;align-items:flex-start;}
-    .rule-num{width:42px;height:42px;border-radius:10px;background:var(--orange);color:white;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;}
+    .rule-num{width:42px;height:42px;border-radius:10px;background:var(--orange);color:white;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family: 'Poppins', sans-serif;}
     .outcomes-list{display:flex;flex-direction:column;gap:16px;}
     .outcome-card{background:var(--white);border-radius:var(--radius);padding:24px 28px;box-shadow:var(--shadow);border:1px solid var(--border-light);display:flex;gap:18px;align-items:flex-start;}
-    .outcome-num{width:38px;height:38px;border-radius:50%;background:var(--cream);border:2px solid var(--orange);color:var(--orange);font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Nunito',sans-serif;}
+    .outcome-num{width:38px;height:38px;border-radius:50%;background:var(--cream);border:2px solid var(--orange);color:var(--orange);font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family: 'Poppins', sans-serif;}
+    .winners-section{
+      position:relative; padding:80px 0; overflow:hidden; text-align:center;
+      background:url('images/community/idc2-highlight-5.jpg') center 30%/cover no-repeat;
+      min-height:520px;
+    }
+    .winners-section::before{
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(135deg, rgba(13,31,10,.82) 0%, rgba(26,61,15,.78) 55%, rgba(45,102,24,.72) 100%);
+    }
+    .winners-section .container{ position:relative; z-index:1; }
+    .winner-card{
+      background:rgba(13,31,10,.45); border:1px solid rgba(255,255,255,.22);
+      border-radius:var(--radius); padding:32px; text-align:center; backdrop-filter:blur(8px);
+    }
+    .winner-card h4{color:var(--orange);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
+    .winner-card h3{color:#fff;}
+    .winner-card p{color:rgba(255,255,255,.85);}
+    .winner-card .btn{white-space:nowrap;padding:12px 22px;font-size:.9rem;}
     @media(max-width:900px){.hack-hero-inner{grid-template-columns:1fr}.hack-visual{display:none}.detail-grid,.rules-grid{grid-template-columns:1fr}}
+    @media(max-width:640px){
+      .winners-section{ padding:56px 0; background-position:center 22%; min-height:420px; }
+      .winner-card{ padding:24px 18px; }
+      .winner-card .btn{ padding:12px 16px; font-size:.85rem; }
+    }
+  @media(max-width:640px){
+    .hack-hero{padding:40px 0;}
+    .past-badge{margin-bottom:12px;padding:6px 16px;font-size:.78rem;}
+    .hack-hero .tag{margin-bottom:8px;}
+    .hack-hero h1{margin-bottom:12px;font-size:1.6rem;}
+    .hack-hero .sub{margin-bottom:20px;font-size:.92rem;}
+  }
   </style>
 </head>
 <body>
@@ -98,7 +128,7 @@
 <section class="hack-hero">
   <div class="container hack-hero-inner">
     <div>
-      <div class="past-badge">✅ Event Completed — 2025</div>
+      <div class="past-badge">Event Completed, 2025</div>
       <div class="tag" style="background:rgba(224,120,32,.2);color:var(--orange);">Hackathon 2025</div>
       <h1>Ibom Data Connect 2.0 Hackathon:<br/><span>Driving Tourism &amp; Hospitality Growth in Akwa Ibom</span></h1>
       <p class="sub">A landmark data hackathon where participants used 20 years of simulated tourism data to uncover insights and drive innovation for Akwa Ibom's hospitality industry.</p>
@@ -106,11 +136,11 @@
       <a href="contact.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.3);">Contact Us</a>
     </div>
     <div class="hack-visual">
-      <h3>💰 Prize Pool — Completed</h3>
+      <h3>Prize Pool (Completed)</h3>
       <div class="prize-row">
-        <div class="prize-mini"><span class="amt">₦50k</span><div class="lbl">🥇 Grand Prize</div></div>
-        <div class="prize-mini gold"><span class="amt">₦30k</span><div class="lbl">🥈 Runner-up</div></div>
-        <div class="prize-mini"><span class="amt">₦20k</span><div class="lbl">🥉 2nd Runner-up</div></div>
+        <div class="prize-mini"><span class="amt">₦50k</span><div class="lbl">Grand Prize</div></div>
+        <div class="prize-mini gold"><span class="amt">₦30k</span><div class="lbl">Runner-up</div></div>
+        <div class="prize-mini"><span class="amt">₦20k</span><div class="lbl">2nd Runner-up</div></div>
       </div>
       <div class="hack-dates">
         <div class="hack-date-row"><div class="dot"></div><span>Registration: Sept 13–18, 2025</span></div>
@@ -131,17 +161,14 @@
     </div>
     <div class="card-grid-3">
       <div class="card">
-        <div class="card-icon">🎯</div>
         <h4>Our Mission</h4>
-        <p>Empowering innovators to tackle real-world business challenges through data, AI, and collaborative creativity — believing every problem has a data-driven solution.</p>
+        <p>Empowering innovators to tackle real-world business challenges through data, AI, and collaborative creativity, believing every problem has a data-driven solution.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🌍</div>
         <h4>Organised By</h4>
         <p>Proudly organised by Ibom Data Community, a nonprofit dedicated to advancing data education and fostering inclusive innovation across all demographics.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🚀</div>
         <h4>Participant Benefits</h4>
         <ul class="bullet-list" style="margin-top:4px;">
           <li>Portfolio Showcase</li>
@@ -165,7 +192,7 @@
       <div class="detail-card">
         <h4>01 / Problem Statement</h4>
         <h3>Tourism &amp; Hospitality in Akwa Ibom</h3>
-        <p>Akwa Ibom — with its beautiful beaches, cultural festivals, cuisine, and emerging hospitality scene — has enormous untapped potential. Participants were challenged to use data to uncover what's holding it back and how to move forward.</p>
+        <p>Akwa Ibom, with its beautiful beaches, cultural festivals, cuisine, and emerging hospitality scene, has enormous untapped potential. Participants were challenged to use data to uncover what's holding it back and how to move forward.</p>
       </div>
       <div class="detail-card">
         <h4>02 / Objectives</h4>
@@ -186,10 +213,10 @@
         <h4>04 / Deliverables</h4>
         <h3>What Teams Submitted</h3>
         <ul class="bullet-list">
-          <li><strong>Cleaned Dataset</strong> — structured &amp; analysis-ready</li>
-          <li><strong>Dashboards</strong> — Power BI, Tableau, Python, R</li>
-          <li><strong>10-slide Presentation</strong> — insights &amp; storytelling</li>
-          <li><strong>Recommendations</strong> — data-backed strategic advice</li>
+          <li><strong>Cleaned Dataset</strong>: structured &amp; analysis-ready</li>
+          <li><strong>Dashboards</strong>: Power BI, Tableau, Python, R</li>
+          <li><strong>10-slide Presentation</strong>: insights &amp; storytelling</li>
+          <li><strong>Recommendations</strong>: data-backed strategic advice</li>
         </ul>
       </div>
     </div>
@@ -245,20 +272,34 @@
   </div>
 </section>
 
-<!-- PRIZES -->
-<section class="section prize-section">
+<!-- WINNING TEAMS -->
+<section class="winners-section">
   <div class="container">
     <div class="section-header">
-      <div class="tag">Rewards</div>
-      <h2>Prize Pool</h2>
-      <p>Top 3 teams were rewarded for their hard work, creativity, and data insights.</p>
+      <div class="tag" style="background:rgba(247,146,30,.2);color:var(--orange);">The Winners</div>
+      <h2 style="color:#fff;">Meet the Winning Teams</h2>
+      <p style="color:rgba(255,255,255,.75);">Three teams turned tourism data into real insights and took home the prizes.</p>
     </div>
-    <div class="prizes-grid">
-      <div class="prize-card"><div class="prize-emoji">🥈</div><div class="prize-amount">₦30k</div><div class="prize-label">First Runner-up</div></div>
-      <div class="prize-card grand"><div class="prize-emoji">🏆</div><div class="prize-amount">₦50k</div><div class="prize-label">Grand Prize</div></div>
-      <div class="prize-card"><div class="prize-emoji">🥉</div><div class="prize-amount">₦20k</div><div class="prize-label">Second Runner-up</div></div>
+    <div class="card-grid-3">
+      <div class="winner-card">
+        <h4>Grand Prize, ₦50k</h4>
+        <h3>Mfoniee</h3>
+        <p>Team lead: Mfonobong Sunday</p>
+        <a href="https://drive.google.com/open?id=1eMbf_8ZF_93dSegqPdHx7n8zxfH1XJME" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:16px;">View Presentation →</a>
+      </div>
+      <div class="winner-card">
+        <h4>First Runner-up, ₦30k</h4>
+        <h3>Team KPI</h3>
+        <p>Umobit Daniel Sunday &amp; Idarabong Udofia</p>
+        <a href="https://drive.google.com/open?id=1u_17W_90Ezqv7hRaZEpBTS2ZVsoFY65V" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:16px;">View Presentation →</a>
+      </div>
+      <div class="winner-card">
+        <h4>Second Runner-up, ₦20k</h4>
+        <h3>Ubon AI</h3>
+        <p>Edet Joseph Ebong &amp; Ibangha Ubon</p>
+        <a href="https://drive.google.com/open?id=1_aXuoFN9wjkb1_tM1SjqwiAi4Yl9pwoB" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:16px;">View Presentation →</a>
+      </div>
     </div>
-    <p style="text-align:center;margin-top:32px;color:var(--text-light);font-size:.88rem;">Plus certificates, LinkedIn features, and community recognition for all participants.</p>
   </div>
 </section>
 
@@ -271,10 +312,10 @@
       <p>Proudly supported by industry leaders fostering innovation and nurturing the next generation of tech talent.</p>
     </div>
     <div class="sponsor-grid">
-      <div class="sponsor-card"><div class="sponsor-logo">🌍</div>Ibom Data Community</div>
-      <div class="sponsor-card"><div class="sponsor-logo">🚀</div>Start Innovation Hub</div>
-      <div class="sponsor-card"><div class="sponsor-logo">💎</div>Gem Nexus</div>
-      <div class="sponsor-card"><div class="sponsor-logo">📦</div>TakaShip</div>
+      <div class="sponsor-card"><img src="images/community/nouvells-logo.jpg" alt="Nouvells" style="max-width:140px;max-height:60px;object-fit:contain;margin-bottom:10px;"/>Nouvells</div>
+      <div class="sponsor-card"><img src="images/community/lunchpark-logo.jpg" alt="Lunch Park" style="max-width:140px;max-height:60px;object-fit:contain;margin-bottom:10px;"/>Lunch Park</div>
+      <div class="sponsor-card"><img src="images/community/tablesbi-logo.jpg" alt="TablesBI" style="max-width:140px;max-height:60px;object-fit:contain;margin-bottom:10px;"/>TablesBI</div>
+      <div class="sponsor-card"><img src="images/community/data-whisperer-logo.jpg" alt="Data Whisperer Academy" style="max-width:140px;max-height:60px;object-fit:contain;margin-bottom:10px;"/>Data Whisperer Academy</div>
     </div>
   </div>
 </section>
@@ -289,26 +330,25 @@
         <p style="margin-bottom:28px;">Missed this hackathon? Join the Ibom Data Community and be the first to know about upcoming events, mentorship programmes, and opportunities.</p>
         <div class="contact-info">
           <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
             <div class="contact-item-text"><strong>Email Us</strong><a href="mailto:ibomdatacommunity@gmail.com" style="color:var(--orange);">ibomdatacommunity@gmail.com</a></div>
           </div>
         </div>
         <div style="margin-top:24px;">
           <div class="social-row">
-            <a href="#" class="social-pill">📘 Facebook</a>
-            <a href="#" class="social-pill">💼 LinkedIn</a>
-            <a href="#" class="social-pill">🐦 Twitter / X</a>
+            <a href="https://www.facebook.com/profile.php?id=6156" target="_blank" rel="noopener" class="social-pill">Facebook</a>
+            <a href="https://www.linkedin.com/company/ibom-data-community/" target="_blank" rel="noopener" class="social-pill">LinkedIn</a>
+            <a href="https://x.com/ibomdata" target="_blank" rel="noopener" class="social-pill">Twitter / X</a>
           </div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px;">
-          <h3 style="color:white;margin-bottom:12px;">🚀 What's Coming Next</h3>
-          <p style="margin-bottom:20px;font-size:.9rem;">Ibom Data Connect 3.0 is on the horizon — 31 October 2026. Join our community to stay updated on all upcoming events.</p>
+          <h3 style="color:white;margin-bottom:12px;">What's Coming Next</h3>
+          <p style="margin-bottom:20px;font-size:.9rem;">Ibom Data Connect 3.0 is on the horizon, arriving 31 October 2026. Join our community to stay updated on all upcoming events.</p>
           <a href="ibom-data-connect-3.html" class="btn btn-primary" style="width:100%;text-align:center;display:block;padding:13px;">Explore IDC 3.0</a>
         </div>
         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px;">
-          <h3 style="color:white;margin-bottom:10px;">🤝 Join the Community</h3>
+          <h3 style="color:white;margin-bottom:10px;">Join the Community</h3>
           <p style="margin-bottom:16px;font-size:.88rem;">200+ members, free resources, mentorship, scholarships, Friday games and more.</p>
           <a href="mailto:ibomdatacommunity@gmail.com" class="btn btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);width:100%;text-align:center;display:block;padding:11px;">Get In Touch</a>
         </div>

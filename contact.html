@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us — Ibom Data Community</title>
+  <title>Contact Us | Ibom Data Community</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Get in touch with Ibom Data Community — email us, follow our socials, or send us a message."/>
-  <link rel="stylesheet" href="style.css?v=4"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <meta name="description" content="Get in touch with Ibom Data Community. Email us, follow our socials, or send us a message."/>
+  <link rel="stylesheet" href="style.css?v=5"/>
   <style>
     .contact-hero {
       background: linear-gradient(135deg, #0F1F0A 0%, #1C3D12 60%, #0F2C08 100%);
@@ -31,7 +29,7 @@
       margin-bottom: 22px;
     }
     .contact-hero h1 {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 900;
       color: #fff;
@@ -106,7 +104,7 @@
     }
     .form-group input, .form-group select, .form-group textarea {
       width: 100%; padding: 12px 14px; border-radius: 10px;
-      border: 1px solid var(--border); font-family: 'Inter', sans-serif;
+      border: 1px solid var(--border); font-family: 'Poppins', sans-serif;
       font-size: .94rem; color: var(--text-dark); background: var(--cream);
       transition: border-color .2s ease;
     }
@@ -116,7 +114,7 @@
     .form-group textarea { resize: vertical; min-height: 130px; }
 
     .contact-form-card button[type="submit"] {
-      width: 100%; border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+      width: 100%; border: none; cursor: pointer; font-family: 'Poppins', sans-serif;
     }
 
     .form-note { font-size: .8rem; color: var(--text-light); margin-top: 14px; text-align: center; }
@@ -129,6 +127,7 @@
       .form-row { grid-template-columns: 1fr; }
       .contact-form-card { padding: 28px 22px; }
     }
+  @media(max-width:640px){.contact-hero{padding:44px 0;}}
   </style>
 </head>
 <body>
@@ -203,7 +202,7 @@
       <!-- INFO CARD -->
       <div class="contact-info">
         <h3>Contact Details</h3>
-        <p>Reach us directly by email, or follow along and message us on social media — we're active and responsive on all of these.</p>
+        <p>Reach us directly by email, or follow along and message us on social media. We're active and responsive on all of these.</p>
 
         <div class="contact-line">
           <span class="icon-badge">📧</span>
@@ -300,7 +299,7 @@
         .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
         .then(function (result) {
           if (!result.ok) throw new Error((result.data && result.data.error) || 'Failed to send');
-          status.textContent = "Message sent — we'll get back to you soon!";
+          status.textContent = "Message sent. We'll get back to you soon!";
           status.classList.add('is-success');
           form.reset();
         })

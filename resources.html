@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Knowledge Resources — Ibom Data Community</title>
+  <title>Knowledge Resources | Ibom Data Community</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <link rel="stylesheet" href="style.css?v=4"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=5"/>
   <style>
     /* ── Resources page styles ── */
     .res-hero {
@@ -31,7 +29,7 @@
       margin-bottom: 22px;
     }
     .res-hero h1 {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 900;
       color: #fff;
@@ -129,7 +127,7 @@
       flex-wrap: wrap;
     }
     .res-section-head h2 {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
       font-weight: 900;
       color: var(--dark-hero);
@@ -198,7 +196,7 @@
     .res-icon.purple { background: rgba(120,60,200,.1); }
     .res-icon.teal { background: rgba(0,150,136,.1); }
     .res-card-title {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.05rem;
       font-weight: 800;
       color: var(--dark-hero);
@@ -269,7 +267,7 @@
     }
     .idc-tip-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
     .idc-tip h4 {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.05rem;
       font-weight: 800;
       color: #fff;
@@ -321,7 +319,7 @@
       padding: 80px 24px;
     }
     .res-cta h2 {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: clamp(1.6rem, 4vw, 2.4rem);
       font-weight: 900;
       color: #fff;
@@ -333,6 +331,7 @@
     @media (max-width: 600px) {
       .idc-tip { flex-direction: column; gap: 12px; }
     }
+  @media(max-width:640px){.res-hero{padding:44px 0;}}
   </style>
 </head>
 <body>
@@ -396,7 +395,7 @@
 <section class="res-hero">
   <div class="container">
     <span class="badge">📚 Knowledge Resources</span>
-    <h1>Learn Data Skills — For Free</h1>
+    <h1>Learn Data Skills, For Free</h1>
     <p>Curated tools, courses, and platforms to take you from beginner to job-ready. Handpicked by the IDC team.</p>
     <div class="res-hero-pills">
       <span class="res-hero-pill">Excel &amp; Sheets</span>
@@ -439,7 +438,7 @@
       <h2>🟢 Beginner Resources</h2>
       <span class="level-pill beginner">Beginner</span>
     </div>
-    <p class="res-section-desc">Never worked with data before? Start here. These tools and courses are designed to be accessible to complete beginners — no coding experience required for most of them.</p>
+    <p class="res-section-desc">Never worked with data before? Start here. These tools and courses are designed to be accessible to complete beginners. No coding experience is required for most of them.</p>
 
     <div class="res-grid">
 
@@ -466,7 +465,7 @@
             <div class="res-card-platform">Google Workspace</div>
           </div>
         </div>
-        <p class="res-card-desc">A free, browser-based alternative to Excel. Great for collaboration and sharing. Learn the same core spreadsheet skills — formulas, charts, and data cleaning — with nothing to install.</p>
+        <p class="res-card-desc">A free, browser-based alternative to Excel. Great for collaboration and sharing. Learn the same core spreadsheet skills, formulas, charts, and data cleaning, with nothing to install.</p>
         <div class="res-card-footer">
           <span class="res-tag free">100% Free</span>
           <a href="https://workspace.google.com/intl/en/products/sheets/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
@@ -522,7 +521,7 @@
         <div class="res-card-top">
           <div class="res-icon teal">🎯</div>
           <div>
-            <div class="res-card-title">Khan Academy — Statistics</div>
+            <div class="res-card-title">Khan Academy: Statistics</div>
             <div class="res-card-platform">Khan Academy</div>
           </div>
         </div>
@@ -556,7 +555,7 @@
             <div class="res-card-platform">Kaggle Learn / freeCodeCamp</div>
           </div>
         </div>
-        <p class="res-card-desc">Python's Pandas and NumPy libraries make data wrangling at scale possible. Kaggle Learn offers a free, self-paced Python for Data Science course that's practical and project-based — great once you're comfortable with SQL basics.</p>
+        <p class="res-card-desc">Python's Pandas and NumPy libraries make data wrangling at scale possible. Kaggle Learn offers a free, self-paced Python for Data Science course that's practical and project-based. It's great once you're comfortable with SQL basics.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
           <a href="https://www.kaggle.com/learn/python" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
@@ -601,7 +600,7 @@
             <div class="res-card-platform">Mode Analytics / StrataScratch</div>
           </div>
         </div>
-        <p class="res-card-desc">Go beyond basic queries with window functions, CTEs, subqueries, and performance optimisation. StrataScratch has real interview-style SQL questions from top companies — excellent for job preparation and sharpening analytical SQL skills.</p>
+        <p class="res-card-desc">Go beyond basic queries with window functions, CTEs, subqueries, and performance optimisation. StrataScratch has real interview-style SQL questions from top companies, excellent for job preparation and sharpening analytical SQL skills.</p>
         <div class="res-card-footer">
           <span class="res-tag freemium">Free / Freemium</span>
           <a href="https://www.stratascratch.com/" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
@@ -657,7 +656,7 @@
         <div class="res-card-top">
           <div class="res-icon red">🧠</div>
           <div>
-            <div class="res-card-title">Machine Learning — Andrew Ng</div>
+            <div class="res-card-title">Machine Learning: Andrew Ng</div>
             <div class="res-card-platform">Coursera / DeepLearning.AI</div>
           </div>
         </div>
@@ -676,7 +675,7 @@
             <div class="res-card-platform">DataTalks.Club</div>
           </div>
         </div>
-        <p class="res-card-desc">A free 9-week cohort-based course covering the full data engineering stack — containerisation, data warehousing, workflow orchestration, batch and streaming processing. Industry-aligned and project-driven.</p>
+        <p class="res-card-desc">A free 9-week cohort-based course covering the full data engineering stack: containerisation, data warehousing, workflow orchestration, batch and streaming processing. Industry-aligned and project-driven.</p>
         <div class="res-card-footer">
           <span class="res-tag free">Free</span>
           <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank" rel="noopener" class="res-card-link">Explore →</a>
@@ -745,7 +744,7 @@
     <h2>Learn Better Together</h2>
     <p>Join IDC to share resources, get feedback on your projects, and grow alongside a community of data learners just like you.</p>
     <div class="btn-row">
-      <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary" style="font-size:1rem;padding:14px 32px;">Join the Community — Free</a>
+      <a href="https://forms.gle/GvVMkUcGDKdPKGCW6" class="btn btn-primary" style="font-size:1rem;padding:14px 32px;">Join the Community, Free</a>
       <a href="faqs.html" class="btn btn-outline" style="color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.3);font-size:1rem;padding:14px 28px;">Read FAQs</a>
     </div>
   </div>
