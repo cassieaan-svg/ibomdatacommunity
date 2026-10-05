@@ -65,6 +65,11 @@
     .pillar-body h4 { margin-bottom: 4px; font-size: .95rem; }
     .pillar-body p { font-size: .88rem; }
 
+    .mv-block { margin-top: 28px; padding: 20px 22px; background: var(--cream); border-radius: var(--radius); border: 1px solid var(--border-light); display: flex; flex-direction: column; gap: 14px; }
+    .mv-label { display: block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--orange); margin-bottom: 4px; }
+    .mv-item p { font-size: .9rem; line-height: 1.6; margin: 0; }
+    .mv-link { font-size: .85rem; font-weight: 700; color: var(--orange); }
+    .mv-link:hover { text-decoration: underline; }
     .social-follow { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border-light); }
     .social-follow-label {
       display: block; font-size: .74rem; font-weight: 700; text-transform: uppercase;
@@ -183,7 +188,7 @@
 
     /* Secondary supporting events — quieter, varied proportions */
     .events-secondary {
-      display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 24px; margin-top: 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 0;
     }
     .event-secondary { display: block; }
     .event-secondary-photo {
@@ -191,8 +196,7 @@
       border-radius: var(--radius); overflow: hidden;
       box-shadow: var(--shadow); background: var(--cream); margin-bottom: 14px;
     }
-    .events-secondary .event-secondary:nth-child(2) .event-secondary-photo { aspect-ratio: 3 / 4; }
-    .events-secondary .event-secondary:nth-child(3) .event-secondary-photo { aspect-ratio: 1 / 1; }
+    .events-secondary .event-secondary-photo { aspect-ratio: 16 / 10; }
     .event-secondary-photo img {
       position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: cover; transition: transform .7s ease;
@@ -561,6 +565,18 @@
           </div>
         </div>
 
+        <div class="mv-block">
+          <div class="mv-item">
+            <span class="mv-label">Our Mission</span>
+            <p>To bring data analytics enthusiasts and professionals together to share knowledge, collaborate, and keep learning, so everyone, from beginners to experts, can grow their careers.</p>
+          </div>
+          <div class="mv-item">
+            <span class="mv-label">Our Vision</span>
+            <p>A future where data skills are within everyone's reach, and thriving communities empower people to build meaningful solutions and lasting impact.</p>
+          </div>
+          <a href="team.html#mission" class="mv-link">Read more about who we are &rarr;</a>
+        </div>
+
         <div class="social-follow">
           <span class="social-follow-label">Follow the Journey</span>
           <div class="social-follow-links">
@@ -720,7 +736,7 @@
         </div>
       </div>
       <div class="testimonial-card">
-        <p class="testimonial-quote">"Being part of IDC has been a game-changer for me. It's made me realize that I still have a lot to learn, and that's motivated me to take my data analysis journey seriously and be more intentional about my growth. One of the most significant impacts of IDC on me is that it's helped me develop my critical thinking skills and attention to detail, and that's been a total mindset shift."</p>
+        <p class="testimonial-quote">"My experience with the Data Analytics Scholarship through Root Hub has been truly transformative. It gave me the opportunity to learn, grow my skills, and connect with other passionate learners. I’m so grateful to Root Hub and the Ibom Data Community for making this possible and for helping me take a meaningful step forward in my career. It wasn’t just training. It was a chance to discover what I can do."</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar"><img src="images/community/testimonial-blessing-ekanem.jpg" alt="Blessing Ekanem"/></div>
           <div class="testimonial-author-info">
