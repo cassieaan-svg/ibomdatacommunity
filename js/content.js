@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '<a href="' + escapeHtml(next.link) + '" class="btn btn-primary">' +
               escapeHtml(next.linkText.replace(/\s*→\s*$/, '')) + ' <span class="event-cta-arrow">→</span>' +
             '</a>' +
-            (next.secondaryLink ? ' <a href="' + escapeHtml(next.secondaryLink) + '" class="btn btn-outline" target="_blank" rel="noopener" style="margin-left:10px;">' + escapeHtml(next.secondaryText || 'Register') + '</a>' : '') +
+            (next.secondaryLink ? ' <a href="' + escapeHtml(next.secondaryLink) + '" class="btn btn-primary" target="_blank" rel="noopener" style="margin-left:10px;">' + escapeHtml(next.secondaryText || 'Register') + '</a>' : '') +
           '</div>' +
         '</div>';
     }
