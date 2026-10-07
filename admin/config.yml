@@ -105,6 +105,8 @@ collections:
               - { label: "Photo", name: "image", widget: "image", required: false, hint: "Required for primary and past events; not used for the upcoming banner" }
               - { label: "Link (page file, e.g. hackathon-2025.html)", name: "link", widget: "string" }
               - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Second Button Link", name: "secondaryLink", widget: "string", required: false, hint: "Optional, upcoming event only. Full URL, e.g. a registration form." }
+              - { label: "Second Button Text", name: "secondaryText", widget: "string", required: false }
 
   - name: "blog"
     label: "Blog"
@@ -127,6 +129,8 @@ collections:
               - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
               - { label: "Author", name: "author", widget: "string", default: "Ibom Data Community" }
               - { label: "Cover Photo", name: "coverImage", widget: "image" }
+              - { label: "Button Text", name: "ctaText", widget: "string", required: false, hint: "Optional button shown under the article, e.g. Register for the Hackathon Now" }
+              - { label: "Button Link", name: "ctaLink", widget: "string", required: false, hint: "Full URL the button opens, e.g. a registration form" }
               - label: "Body"
                 name: "body"
                 widget: "text"

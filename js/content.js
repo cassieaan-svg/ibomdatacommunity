@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (primary) {
       html += '' +
         '<a href="' + escapeHtml(primary.link) + '" class="event-primary">' +
-          '<img src="' + escapeHtml(primary.image) + '" alt="' + escapeHtml(primary.title) + ' — ' + escapeHtml(primary.theme || '') + '" loading="lazy"/>' +
+          '<img src="' + escapeHtml(primary.image) + '" alt="' + escapeHtml(primary.title) + ' | ' + escapeHtml(primary.theme || '') + '" loading="lazy"/>' +
           '<div class="event-primary-copy">' +
             '<span class="event-status">' + escapeHtml(primary.status) + '</span>' +
             '<h3>' + escapeHtml(primary.title) + '</h3>' +
@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '<a href="' + escapeHtml(next.link) + '" class="btn btn-primary">' +
               escapeHtml(next.linkText.replace(/\s*→\s*$/, '')) + ' <span class="event-cta-arrow">→</span>' +
             '</a>' +
+            (next.secondaryLink ? ' <a href="' + escapeHtml(next.secondaryLink) + '" class="btn btn-outline" target="_blank" rel="noopener" style="margin-left:10px;">' + escapeHtml(next.secondaryText || 'Register') + '</a>' : '') +
           '</div>' +
         '</div>';
     }
@@ -175,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
       wantedSlug: wantedSlug,
       emptyState: {
         name: 'Coming Soon',
-        quote: "We're just getting started — check back soon to meet our next Community Member of the Week."
+        quote: "We're just getting started, check back soon to meet our next Community Member of the Week."
       }
     });
 
@@ -537,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderBlogList(container, posts) {
     if (!posts.length) {
-      container.innerHTML = '<p class="blog-empty">No posts yet — check back soon.</p>';
+      container.innerHTML = '<p class="blog-empty">No posts yet. check back soon.</p>';
       return;
     }
     var sorted = posts.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
@@ -596,7 +597,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    document.title = post.title + ' — Ibom Data Community';
+    document.title = post.title + ' | Ibom Data Community';
     if (metaDesc) metaDesc.setAttribute('content', post.excerpt || '');
     titleEl.textContent = post.title;
     metaEl.textContent = formatDate(post.date) + ' · ' + post.author;
@@ -617,6 +618,9 @@ document.addEventListener('DOMContentLoaded', function () {
     bodyEl.innerHTML = paragraphs.map(function (para) {
       return '<p>' + linkify(escapeHtml(para).replace(/\n/g, '<br/>')) + '</p>';
     }).join('');
+    if (post.ctaLink) {
+      bodyEl.innerHTML += '<p style="margin-top:28px;"><a href="' + escapeHtml(post.ctaLink) + '" target="_blank" rel="noopener" class="btn btn-primary">' + escapeHtml(post.ctaText || 'Register Now') + '</a></p>';
+    }
 
     var shareBtn = document.getElementById('postShare');
     if (shareBtn) {

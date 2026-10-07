@@ -7,16 +7,16 @@
       "date": "2026-09-22",
       "author": "Ibom Data Community",
       "coverImage": "images/community/group-photo.jpg",
-      "body": "We're starting this blog to share what's actually happening inside our community — the workshops, the wins, the lessons learned the hard way, and the people behind it all.\n\nExpect recaps from our events, practical data tutorials, member spotlights in long form, and honest reflections on building a data community from the ground up in Akwa Ibom.\n\nGot something you'd like to write about? Reach out — we're always looking for community voices to feature here."
+      "body": "We're starting this blog to share what's actually happening inside our community: the workshops, the wins, the lessons learned the hard way, and the people behind it all.\n\nExpect recaps from our events, practical data tutorials, member spotlights in long form, and honest reflections on building a data community from the ground up in Akwa Ibom.\n\nGot something you'd like to write about? Reach out, we're always looking for community voices to feature here."
     },
     {
       "slug": "5-lessons-from-our-first-hackathon",
       "title": "5 Lessons From Our First Hackathon",
-      "excerpt": "What we learned putting together IDC's first hackathon — from team formation to the final presentations.",
+      "excerpt": "What we learned putting together IDC's first hackathon, from team formation to the final presentations.",
       "date": "2026-06-10",
       "author": "Ibom Data Community",
       "coverImage": "images/community/hackathon.jpg",
-      "body": "Running our first hackathon taught us more than we expected — not just about data, but about community.\n\n1. Team formation matters more than skill level. The strongest teams weren't always the most technically experienced — they were the ones who communicated well from hour one.\n\n2. Real datasets beat toy datasets. Giving teams messy, real-world data forced genuinely useful problem-solving instead of textbook exercises.\n\n3. Mentors are more valuable than prizes. The teams that checked in with mentors regularly produced noticeably stronger final presentations.\n\n4. Time-boxing saves projects. Teams that planned their day in blocks finished; teams that didn't were still cleaning data an hour before judging.\n\n5. The community showed up. From volunteers to judges to the people who just came to cheer teams on, it was a reminder of why we do this.\n\nWe're already planning the next one — bigger, with more real-world partners."
+      "body": "Running our first hackathon taught us more than we expected, not just about data, but about community.\n\n1. Team formation matters more than skill level. The strongest teams weren't always the most technically experienced. They were the ones who communicated well from hour one.\n\n2. Real datasets beat toy datasets. Giving teams messy, real-world data forced genuinely useful problem-solving instead of textbook exercises.\n\n3. Mentors are more valuable than prizes. The teams that checked in with mentors regularly produced noticeably stronger final presentations.\n\n4. Time-boxing saves projects. Teams that planned their day in blocks finished; teams that didn't were still cleaning data an hour before judging.\n\n5. The community showed up. From volunteers to judges to the people who just came to cheer teams on, it was a reminder of why we do this.\n\nWe're already planning the next one, bigger, with more real-world partners."
     },
     {
       "slug": "ibom-data-connect-3-0-is-coming",
@@ -29,12 +29,14 @@
     },
     {
       "slug": "the-next-hackathon-is-on-the-way",
-      "title": "The Next Hackathon Is On the Way",
-      "excerpt": "After the success of our first hackathon, we're bringing it back as part of Ibom Data Connect 3.0.",
+      "title": "The Data & AI Automation Hackathon Is Here",
+      "excerpt": "Build n8n workflows that use data and AI to solve real problems across Nigerian and African communities. Pick one of eight tracks and register now.",
       "date": "2026-09-29",
       "author": "Ibom Data Community",
       "coverImage": "images/community/idc3-sponsors-cover.jpg",
-      "body": "If you were part of our first hackathon, you already know how it went: real datasets, real deadlines, and teams turning messy data into genuinely useful solutions. We're bringing that same energy back, this time as part of Ibom Data Connect 3.0.\n\nWe haven't locked in every detail yet, but here's what we can confirm: it's happening, it's tied to IDC 3.0 on 31st October 2026, and it's open to teams of all experience levels, just like last time.\n\nFull details, including the challenge, timeline and prize pool, will be announced as we get closer to the event. If our first hackathon is anything to go by, expect a tight timeframe, real-world data, and a room full of people cheering teams on until the final presentation.\n\nWant to be notified the moment registration opens? Join the community and keep an eye on this blog. We'll also be sharing sponsor and partner opportunities for teams and organisations who want to get involved early, you can reach us by call or WhatsApp at 09045948164.\n\nStart sharpening your tools. This one's coming."
+      "body": "The Ibom Data Community hackathon is back, and this time the challenge is Data and AI automation. Teams will build solutions to real problems facing Nigerian and African communities, and every solution is built as an n8n workflow that collects data, cleans and validates it, uses AI to make decisions along the way, and acts without anyone doing it by hand.\n\nTeams choose one of eight tracks across Fintech, Edtech, Agritech, Healthtech and Commerce:\n\n1. Fintech: Automated Loan Pre-Screening\n2. Fintech: Complaint Triage and Resolution\n3. Edtech: Student Early Warning System\n4. Edtech: Automated Marking and Feedback\n5. Agritech: Market Price Alerts for Farmers\n6. Agritech: Farm Advisory on WhatsApp or SMS\n7. Healthtech: Drug Stock-Out Prevention\n8. Commerce: Inventory and Restocking Assistant for Small Retailers\n\nHow it works: teams have 1 to 2 members, and each team picks one track and submits one solution. Mixed teams are encouraged, so pair someone strong on data with someone strong on automation or the problem domain. Every track comes with an intentionally messy starter dataset, and your workflow must handle it as given. Cleaning it by hand before it enters the workflow will cost you marks.\n\nWhat to submit: a write-up covering the problem, your solution and workflow, how you used data and AI, the impact, your target users and your team. Alongside it, send the exported n8n workflow (JSON), a sample of the cleaned output data, and a demo video of no more than 5 minutes showing the workflow running end to end.\n\nHow you will be judged, out of 100: Automation design 30%, Data quality 25%, Use of AI 25%, Impact and problem fit 10%, and Demo and presentation 10%.\n\nThe hackathon is tied to Ibom Data Connect 3.0 on 31st October 2026. Registration is open, so grab your spot and start building. Questions? Reach us by call or WhatsApp at 09045948164.",
+      "ctaText": "Register for the Hackathon Now",
+      "ctaLink": "https://forms.gle/vg4VeRxz9KvDisU79"
     }
   ]
 }

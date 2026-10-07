@@ -48,7 +48,9 @@
       "date": "31 October 2026",
       "description": "A one-day community event exploring the data behind AI agents, emerging technologies and the ideas shaping what comes next.",
       "link": "ibom-data-connect-3.html",
-      "linkText": "Explore IDC 3.0 →"
+      "linkText": "Explore IDC 3.0 →",
+      "secondaryLink": "https://forms.gle/vg4VeRxz9KvDisU79",
+      "secondaryText": "Register for the Hackathon"
     }
   ]
 }
